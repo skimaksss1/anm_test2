@@ -1,0 +1,47 @@
+<div class="container-fluid mt-3">
+    <div class="row">
+      
+      <div class="col-md-9">
+        <div class="card">
+          <div class="card-header">
+            Пользователи
+          </div>
+          <div class="card-body">
+              <div class="add-user-container">
+                  <h2>Добавить Пользователя</h2>
+                  <form id="add-user-form">
+                    <label for="name">Имя:</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="password">Пароль:</label>
+                    <input type="password" id="password" name="password" required>
+                    <label for="position">Должность:</label>
+                    <input type="text" id="position" name="position" required>
+                    <button onclick="addUser()">Добавить Пользователя</button>
+                  </form>
+                </div>
+                
+                <div class="users-container">
+                  <h2>Все Пользователи</h2>
+                  <table id="users-table2">
+                    <thead>
+                      <tr>
+                        <th>Имя</th>
+                        <th>Email</th>
+                        <th>Должность</th>
+                        <th>Пароль</th>
+                      </tr>
+                    </thead>
+                    <tbody id="listUser">
+                    </tbody>
+                  </table>
+                </div>
+          </div>
+        </div>
+      </div>
+      <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
+    </div>
+  </div>

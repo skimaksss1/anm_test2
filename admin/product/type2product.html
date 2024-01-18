@@ -1,0 +1,229 @@
+<style>
+    .toolbar a {
+        display: inline-block;
+        border: 1px solid #888;
+        padding: 5px 8px;
+        margin: 0 5px 10px 0;
+        color: #000;
+        border-radius: 3px;
+        font-size: 12px;
+        box-shadow: 1px 1px 2px #ddd;
+        background: #fff;
+        vertical-align: top;
+        text-decoration: none;
+    }
+
+    .toolbar select {
+        display: inline-block;
+        height: 28px;
+        line-height: 28px;
+        background: #fff;
+        padding: 0;
+        margin: 0 5px 10px 0;
+        color: #000;
+        box-shadow: 1px 1px 2px #ddd;
+        border-radius: 3px;
+        vertical-align: top;
+        font-size: 12px;
+    }
+
+    .toolbar input {
+        display: inline-block;
+        height: 28px;
+        line-height: 28px;
+        background: #fff;
+        padding: 0;
+        margin: 0 5px 10px 0;
+        color: #000;
+        box-shadow: 1px 1px 2px #ddd;
+        border-radius: 3px;
+        vertical-align: top;
+        font-size: 12px;
+    }
+
+    .toolbar span {
+        display: inline-block;
+        height: 30px;
+        line-height: 30px;
+        padding: 0;
+        margin: 0 0 10px 0;
+        color: #000;
+        vertical-align: top;
+        font-size: 12px;
+    }
+
+    .editor {
+        display: inline-block;
+        min-height: 150px;
+        border: 1px solid #ddd;
+        padding: 10px;
+        min-width: 100%;
+        border-radius: 2px;
+        box-shadow: 1px 1px 2px #ddd;
+        background: #fff;
+    }
+
+    .editor2 {
+        display: inline-block;
+        min-height: 150px;
+        border: 1px solid #ddd;
+        padding: 10px;
+        min-width: 100%;
+        border-radius: 2px;
+        box-shadow: 1px 1px 2px #ddd;
+        background: #fff;
+    }
+
+    .editor3 {
+        display: inline-block;
+        min-height: 150px;
+        border: 1px solid #ddd;
+        padding: 10px;
+        min-width: 100%;
+        border-radius: 2px;
+        box-shadow: 1px 1px 2px #ddd;
+        background: #fff;
+    }
+    .dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown2 {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-toggle2 {
+  cursor: pointer;
+}
+
+.dropdown-menu2 {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  padding: 0;
+  list-style-type: none;
+  border: 1px solid #ccc;
+  min-width: 120px;
+}
+
+.dropdown-menu2 li {
+  padding: 8px 12px;
+}
+
+.dropdown-menu2 li:hover {
+  background-color: #e5e5e5;
+}
+
+.dropdown-toggle3 {
+  cursor: pointer;
+}
+
+.dropdown-menu3 {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  padding: 0;
+  list-style-type: none;
+  border: 1px solid #ccc;
+  min-width: 120px;
+}
+
+.dropdown-menu3 li {
+  padding: 8px 12px;
+}
+
+.dropdown-menu3 li:hover {
+  background-color: #e5e5e5;
+}
+
+</style>
+
+
+<div class="col-lg-12">
+    <div class="card">
+        <div class="card-header">
+            <h4>Добавить под тип продукта</h4>
+        </div>
+        <div class="card-body">
+            <div class="custom-tab">
+
+
+                <div class="tab-content pl-3 pt-2" id="nav-tabContent">
+                    <!-- Русский -->
+                    <div class="tab-pane fade active show" id="custom-nav-home" role="tabpanel"
+                        aria-labelledby="custom-nav-home-tab">
+                        <div class="card">
+                            <div class="card-header">
+                                <strong>Под тип продукта</strong> компании
+                            </div>
+                            <div class="card-body card-block">
+                                <form action="#" method="post" class="form-inline gap20 align-top fd-column">
+                                    <div class="row form-group">
+                                        <div class="col col-md-3"><label for="select" class=" form-control-label">Тип продукта</label></div>
+                                        <div class="col-12 col-md-9">
+                                            <div class="dropdown">
+                                                <div class="dropdown-toggle2" onclick="toggleDropdown('.dropdown-menu2')" >Выберите элемент</div>
+                                                <ul class="dropdown-menu2" id="select">
+                                                  
+                                                </ul>
+                                              </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group" style="width: 100%;"><label for="exampleInputName2"
+                                        class="pr-1  form-control-label">Под тип на русском</label>
+                                    <textarea id="ProductType2Ru" class="form-control w100"
+                                        style="width: 90%;"> </textarea>
+                                </div>
+                                <div class="form-group" style="width: 100%;"><label for="exampleInputName2"
+                                        class="pr-1  form-control-label">Под тип на англиском</label>
+                                    <textarea id="ProductType2En" class="form-control w100"
+                                        style="width: 90%;"> </textarea>
+                                </div>
+                                <div class="form-group" style="width: 100%;"><label for="exampleInputName2"
+                                        class="pr-1  form-control-label">Под тип на казахском</label>
+                                    <textarea id="ProductType2Kz" class="form-control w100"
+                                        style="width: 90%;"> </textarea>
+                                </div>
+
+                                </form>
+                                <br>
+                                
+                            </div>
+                            <div class="card-footer">
+                                <button type="submit" class="btn btn-primary btn-sm"
+                                    onclick="addType2Product('#ProductType2Ru','#ProductType2En','#ProductType2Kz','#select')">
+                                    <i class="fa fa-dot-circle-o"></i> Сохранить
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Вывод новостей -->
+<div class="col-lg-12" onload="loadNews('#fullNews')">
+    <div class="card">
+        <div class="card-header">
+            <h4>Редактировать под тип</h4>
+        </div>
+        <div class="card-body">
+            <div class="custom-tab">
+
+
+                <div class="tab-content pl-3 pt-2" id="fullPodType">
+                    <!-- Русский -->
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

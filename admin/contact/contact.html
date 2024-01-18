@@ -1,0 +1,418 @@
+<div class="col-lg-12">
+    <div class="card">
+        <div class="card-header card-admin">
+            <h4>Контакты</h4>
+            <button type="button" class="btn btn-primary" onclick="scrit('cardPlusCompany')"><i class="fa fa-bars"></i>
+                Скрыть</button>
+
+        </div>
+        <div class="card-body" id="cardPlusCompany">
+            <div class="custom-tab">
+
+                <nav>
+                    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                        <a class="nav-item nav-link active show" id="custom-nav-home-tab2" data-toggle="tab"
+                            href="#custom-nav-home2" role="tab" aria-controls="custom-nav-home2" aria-selected="true"
+                            onclick="loadAdminGenPlus('ru','#genCompanyPlusTitleRu','#genCompanyPlusDescriptionRu','1','+')">Русский</a>
+                        <a class="nav-item nav-link" id="custom-nav-profile-tab2" data-toggle="tab"
+                            href="#custom-nav-profile2" role="tab" aria-controls="custom-nav-profile2"
+                            aria-selected="false"
+                            onclick="loadAdminGenPlus('en','#genCompanyPlusTitleEn','#genCompanyPlusDescriptionEn','1','+')">English</a>
+                        <a class="nav-item nav-link" id="custom-nav-contact-tab2" data-toggle="tab"
+                            href="#custom-nav-contact2" role="tab" aria-controls="custom-nav-contact2"
+                            aria-selected="false"
+                            onclick="loadAdminGenPlus('kz','#genCompanyPlusTitleKz','#genCompanyPlusDescriptionKz','1','+')">Қазақша</a>
+                    </div>
+                </nav>
+                <div class="tab-content pl-3 pt-2" id="nav-tabContent">
+                    <!-- Русский -->
+                    <div class="tab-pane fade active show" id="custom-nav-home2" role="tabpanel"
+                        aria-labelledby="custom-nav-home-tab2">
+                        <div class="card">
+                            <div class="card-header">
+                                <strong>Добавить</strong> номер
+                            </div>
+                            <div class="card-body card-block">
+                                <form action="#" method="post" class="form-inline gap20 align-top fd-column">
+                                    <div class="form-group" style="width: 50%;"><label for="exampleInputName2"
+                                            class="pr-1  form-control-label">Заголовок</label><textarea
+                                            id="genContactNumberTitleRu1" class="form-control w100"> </textarea></div>
+                                    <div class="form-group" style="width: 50%;"><label for="exampleInputName2"
+                                            class="pr-1  form-control-label">Номер телефона</label><textarea
+                                            id="genContactNumberDescriptionRu1" class="form-control w100"> </textarea>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="card-footer">
+                                <button type="submit" class="btn btn-primary btn-sm"
+                                    onclick="saveContact('ru','#genContactNumberTitleRu1','#genContactNumberDescriptionRu1','number')">
+                                    <i class="fa fa-dot-circle-o"></i> Сохранить
+                                </button>
+                                <button type="reset" class="btn btn-danger btn-sm"
+                                    onclick="clearContact('#genContactNumberTitleRu1','#genContactNumberDescriptionRu1')">
+                                    <i class="fa fa-ban"></i> Отменить
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                <strong>Добавить</strong> другие Контакты
+                            </div>
+                            <div class="card-body card-block">
+                                <form action="#" method="post" class="form-inline gap20 align-top fd-column">
+                                    <div class="form-group" style="width: 50%;"><label for="exampleInputName2"
+                                            class="pr-1  form-control-label">Заголовок</label><textarea
+                                            id="genContactOtherTitleRu1" class="form-control w100"> </textarea></div>
+                                    <div class="form-group" style="width: 50%;"><label for="exampleInputName2"
+                                            class="pr-1  form-control-label">Данные</label><textarea
+                                            id="genContactOtherDescriptionRu1" class="form-control w100"> </textarea>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="card-footer">
+                                <button type="submit" class="btn btn-primary btn-sm"
+                                    onclick="saveContact('ru','#genContactOtherTitleRu1','#genContactOtherDescriptionRu1','other')">
+                                    <i class="fa fa-dot-circle-o"></i> Сохранить
+                                </button>
+                                <button type="reset" class="btn btn-danger btn-sm"
+                                    onclick="clearContact('#genContactOtherTitleRu1','#genContactOtherDescriptionRu1')">
+                                    <i class="fa fa-ban"></i> Отменить
+                                </button>
+                            </div>
+                        </div>
+
+
+
+
+
+                    </div>
+                    <!-- English -->
+                    <div class="tab-pane fade" id="custom-nav-profile2" role="tabpanel"
+                        aria-labelledby="custom-nav-profile2-tab2">
+                        <div class="card">
+                            <div class="card-header">
+                                <strong>Add</strong> number
+                            </div>
+                            <div class="card-body card-block">
+                                <form action="#" method="post" class="form-inline gap20 align-top fd-column">
+                                    <div class="form-group" style="width: 50%;"><label for="exampleInputName2"
+                                            class="pr-1  form-control-label">Title</label><textarea
+                                            id="genContactNumberTitleEn1" class="form-control w100"> </textarea></div>
+                                    <div class="form-group" style="width: 50%;"><label for="exampleInputName2"
+                                            class="pr-1  form-control-label">Number phone</label><textarea
+                                            id="genContactNumberDescriptionEn1" class="form-control w100"> </textarea>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="card-footer">
+                                <button type="submit" class="btn btn-primary btn-sm"
+                                    onclick="saveContact('en','#genContactNumberTitleEn1','#genContactNumberDescriptionEn1','number')">
+                                    <i class="fa fa-dot-circle-o"></i> Save
+                                </button>
+                                <button type="reset" class="btn btn-danger btn-sm"
+                                    onclick="clearContact('#genContactNumberTitleEn1','#genContactNumberDescriptionEn1')">
+                                    <i class="fa fa-ban"></i> Clear
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                <strong>Add</strong> other contact
+                            </div>
+                            <div class="card-body card-block">
+                                <form action="#" method="post" class="form-inline gap20 align-top fd-column">
+                                    <div class="form-group" style="width: 50%;"><label for="exampleInputName2"
+                                            class="pr-1  form-control-label">Title</label><textarea
+                                            id="genContactOtherTitleEn1" class="form-control w100"> </textarea></div>
+                                    <div class="form-group" style="width: 50%;"><label for="exampleInputName2"
+                                            class="pr-1  form-control-label">Description</label><textarea
+                                            id="genContactOtherDescriptionEn1" class="form-control w100"> </textarea>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="card-footer">
+                                <button type="submit" class="btn btn-primary btn-sm"
+                                    onclick="saveContact('en','#genContactOtherTitleEn1','#genContactOtherDescriptionEn1','other')">
+                                    <i class="fa fa-dot-circle-o"></i> Save
+                                </button>
+                                <button type="reset" class="btn btn-danger btn-sm"
+                                    onclick="clearContact('#genContactOtherTitleEn1','#genContactOtherDescriptionEn1')">
+                                    <i class="fa fa-ban"></i> Clear
+                                </button>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <!-- Қазақша -->
+                    <div class="tab-pane fade" id="custom-nav-contact2" role="tabpanel"
+                        aria-labelledby="custom-nav-contact2-tab2">
+                        <div class="card">
+                            <div class="card-header">
+                                <strong>Телефонды</strong> қосу
+                            </div>
+                            <div class="card-body card-block">
+                                <form action="#" method="post" class="form-inline gap20 align-top fd-column">
+                                    <div class="form-group" style="width: 50%;"><label for="exampleInputName2"
+                                            class="pr-1  form-control-label">Title</label><textarea
+                                            id="genContactNumberTitleKz1" class="form-control w100"> </textarea></div>
+                                    <div class="form-group" style="width: 50%;"><label for="exampleInputName2"
+                                            class="pr-1  form-control-label">Number phone</label><textarea
+                                            id="genContactNumberDescriptionKz1" class="form-control w100"> </textarea>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="card-footer">
+                                <button type="submit" class="btn btn-primary btn-sm"
+                                    onclick="saveContact('kz','#genContactNumberTitleKz1','#genContactNumberDescriptionKz1','number')">
+                                    <i class="fa fa-dot-circle-o"></i> Сақтау
+                                </button>
+                                <button type="reset" class="btn btn-danger btn-sm"
+                                    onclick="clearContact('#genContactNumberTitleKz1','#genContactNumberDescriptionKz1')">
+                                    <i class="fa fa-ban"></i> Өшіру
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                <strong>Басқа</strong> мәліметтерді қосу
+                            </div>
+                            <div class="card-body card-block">
+                                <form action="#" method="post" class="form-inline gap20 align-top fd-column">
+                                    <div class="form-group" style="width: 50%;"><label for="exampleInputName2"
+                                            class="pr-1  form-control-label">Title</label><textarea
+                                            id="genContactOtherTitleKz1" class="form-control w100"> </textarea></div>
+                                    <div class="form-group" style="width: 50%;"><label for="exampleInputName2"
+                                            class="pr-1  form-control-label">Description</label><textarea
+                                            id="genContactOtherDescriptionKz1" class="form-control w100"> </textarea>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="card-footer">
+                                <button type="submit" class="btn btn-primary btn-sm"
+                                    onclick="saveContact('kz','#genContactOtherTitleKz1','#genContactOtherDescriptionKz1','other')">
+                                    <i class="fa fa-dot-circle-o"></i> Сақтау
+                                </button>
+                                <button type="reset" class="btn btn-danger btn-sm"
+                                    onclick="clearContact('#genContactOtherTitleKz1','#genContactOtherDescriptionKz1')">
+                                    <i class="fa fa-ban"></i> Өшіру
+                                </button>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- фото в контакте -->
+<div class="card">
+    <div class="card-header">
+        <strong>Выбрать</strong> фотографию карточки
+    </div>
+    <div class="card-body card-block">
+        <div class="form-group" style="width: 50%;"><label for="exampleInputEmail2"
+                class="px-1  form-control-label">Фотография</label><input type="file" id="imageAbout" accept="image/*">
+        </div>
+    </div>
+    <div class="card-footer">
+        <button type="submit" class="btn btn-primary btn-sm" onclick="addImgContact()">
+            <i class="fa fa-dot-circle-o"></i> Сохранить
+        </button>
+    </div>
+</div>
+<div class="card">
+    <div class="card-header">
+        <strong>Заголовок карточки</strong>
+    </div>
+    <div class="card-body card-block">
+        <form action="#" method="post" class="form-inline gap20 align-top fd-column">
+            <div class="form-group" style="width: 50%;"><label for="exampleInputName2"
+                    class="pr-1  form-control-label">Русский</label><textarea id="TitleCardRu"
+                    class="form-control w100"> </textarea>
+            </div>
+            <div class="form-group" style="width: 50%;"><label for="exampleInputName2"
+                    class="pr-1  form-control-label">English</label><textarea id="TitleCardEn"
+                    class="form-control w100"> </textarea>
+            </div>
+            <div class="form-group" style="width: 50%;"><label for="exampleInputName2"
+                    class="pr-1  form-control-label">Қазақша</label><textarea id="TitleCardKz"
+                    class="form-control w100"> </textarea>
+            </div>
+        </form>
+    </div>
+    <div class="card-footer">
+        <button type="submit" class="btn btn-primary btn-sm"
+            onclick="saveCardTitle('#TitleCardRu','#TitleCardEn','#TitleCardKz')">
+            <i class="fa fa-dot-circle-o"></i> Сохранить
+        </button>
+        <button type="reset" class="btn btn-danger btn-sm"
+            onclick="loadCardTitle('#TitleCardRu','#TitleCardEn','#TitleCardKz')">
+            <i class="fa fa-ban"></i> Отменить
+        </button>
+    </div>
+</div>
+<!--Адрес в контакте -->
+<div class="card">
+    <div class="card-header">
+        <strong>Адрес карточки</strong>
+    </div>
+    <div class="card-body card-block">
+        <form action="#" method="post" class="form-inline gap20 align-top fd-column">
+            <div class="form-group" style="width: 50%;"><label for="exampleInputName2"
+                    class="pr-1  form-control-label">Русский</label><textarea id="adressCardDownRu"
+                    class="form-control w100"> </textarea></div>
+            <div class="form-group" style="width: 50%;"><label for="exampleInputName2"
+                    class="pr-1  form-control-label">English</label><textarea id="adressCardDownEn"
+                    class="form-control w100"> </textarea>
+            </div>
+            <div class="form-group" style="width: 50%;"><label for="exampleInputName2"
+                    class="pr-1  form-control-label">Қазақша</label><textarea id="adressCardDownKz"
+                    class="form-control w100"> </textarea>
+            </div>
+        </form>
+    </div>
+    <div class="card-footer">
+        <button type="submit" class="btn btn-primary btn-sm"
+            onclick="saveCardAdres('#adressCardDownRu','#adressCardDownEn','#adressCardDownKz')">
+            <i class="fa fa-dot-circle-o"></i> Сохранить
+        </button>
+        <button type="reset" class="btn btn-danger btn-sm"
+            onclick="loadCardAdres('#adressCardDownRu','#adressCardDownEn','#adressCardDownKz')">
+            <i class="fa fa-ban"></i> Отменить
+        </button>
+    </div>
+</div>
+<!--Ссылки в контакте -->
+<div class="card">
+    <div class="card-header">
+        <strong>--Ссылки карточки</strong>
+    </div>
+    <div class="card-body card-block">
+        <form action="#" method="post" class="form-inline gap20 align-top fd-column">
+            <div class="form-group" style="width: 50%;"><label for="exampleInputName2"
+                    class="pr-1  form-control-label">Instagram</label><textarea id="instaCard"
+                    class="form-control w100"> </textarea></div>
+            <div class="form-group" style="width: 50%;"><label for="exampleInputName2"
+                    class="pr-1  form-control-label">Сайт</label><textarea id="webCard"
+                    class="form-control w100"> </textarea>
+            </div>
+        </form>
+    </div>
+    <div class="card-footer">
+        <button type="submit" class="btn btn-primary btn-sm" onclick="saveCardSsil('#instaCard','#webCard')">
+            <i class="fa fa-dot-circle-o"></i> Сохранить
+        </button>
+        <button type="reset" class="btn btn-danger btn-sm" onclick="loadCardSsil('#instaCard','#webCard')">
+            <i class="fa fa-ban"></i> Отменить
+        </button>
+    </div>
+</div>
+<!-- Номера телефонов -->
+<div class="col-lg-12">
+    <div class="card">
+        <div class="card-header card-admin">
+            <h4>Номера телефонов</h4>
+            <button type="button" class="btn btn-primary" onclick="scrit('cardNumber')"><i class="fa fa-bars"></i>
+                Скрыть</button>
+
+        </div>
+        <div class="card-body" id="cardNumber">
+            <div class="custom-tab">
+
+                <nav>
+                    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                        <a class="nav-item nav-link active show" id="custom-nav-home-tab2" data-toggle="tab"
+                            href="#cardPhoneRu" role="tab" aria-controls="custom-nav-home2" aria-selected="true"
+                            onclick="loadContact('ru', '#cardPhoneRu','number');">Русский</a>
+                        <a class="nav-item nav-link" id="custom-nav-profile-tab2" data-toggle="tab" href="#cardPhoneEn"
+                            role="tab" aria-controls="custom-nav-profile2" aria-selected="false"
+                            onclick="loadContact('en', '#cardPhoneEn','number');">English</a>
+                        <a class="nav-item nav-link" id="custom-nav-contact-tab2" data-toggle="tab" href="#cardPhoneKz"
+                            role="tab" aria-controls="custom-nav-contact2" aria-selected="false"
+                            onclick="loadContact('kz', '#cardPhoneKz','number');">Қазақша</a>
+                    </div>
+                </nav>
+                <div class="tab-content pl-3 pt-2" id="nav-tabContent">
+                    <!-- Русский -->
+                    <div class="tab-pane fade active show" id="cardPhoneRu" role="tabpanel"
+                        aria-labelledby="custom-nav-home-tab2">
+
+
+
+                    </div>
+                    <!-- English -->
+                    <div class="tab-pane fade" id="cardPhoneEn" role="tabpanel"
+                        aria-labelledby="custom-nav-profile2-tab2">
+
+
+
+                    </div>
+                    <!-- Қазақша -->
+                    <div class="tab-pane fade" id="cardPhoneKz" role="tabpanel"
+                        aria-labelledby="custom-nav-contact2-tab2">
+
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Другие контакты -->
+<div class="col-lg-12">
+    <div class="card">
+        <div class="card-header card-admin">
+            <h4>Другие контакты</h4>
+            <button type="button" class="btn btn-primary" onclick="scrit('cardOther')"><i class="fa fa-bars"></i>
+                Скрыть</button>
+
+        </div>
+        <div class="card-body" id="cardOther">
+            <div class="custom-tab">
+
+                <nav>
+                    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                        <a class="nav-item nav-link active show" id="custom-nav-home-tab2" data-toggle="tab"
+                            href="#cardOtherRu" role="tab" aria-controls="custom-nav-home2" aria-selected="true"
+                            onclick="loadContact('ru', '#cardOtherRu','other')">Русский</a>
+                        <a class="nav-item nav-link" id="custom-nav-profile-tab2" data-toggle="tab" href="#cardOtherEn"
+                            role="tab" aria-controls="custom-nav-profile2" aria-selected="false"
+                            onclick="loadContact('en', '#cardOtherEn','other')">English</a>
+                        <a class="nav-item nav-link" id="custom-nav-contact-tab2" data-toggle="tab" href="#cardOtherKz"
+                            role="tab" aria-controls="custom-nav-contact2" aria-selected="false"
+                            onclick="loadContact('kz', '#cardOtherKz','other')">Қазақша</a>
+                    </div>
+                </nav>
+                <div class="tab-content pl-3 pt-2" id="nav-tabContent">
+                    <!-- Русский -->
+                    <div class="tab-pane fade active show" id="cardOtherRu" role="tabpanel"
+                        aria-labelledby="custom-nav-home-tab2">
+
+
+
+                    </div>
+                    <!-- English -->
+                    <div class="tab-pane fade" id="cardOtherEn" role="tabpanel"
+                        aria-labelledby="custom-nav-profile2-tab2">
+
+
+
+                    </div>
+                    <!-- Қазақша -->
+                    <div class="tab-pane fade" id="cardOtherKz" role="tabpanel"
+                        aria-labelledby="custom-nav-contact2-tab2">
+
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

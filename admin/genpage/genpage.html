@@ -1,0 +1,526 @@
+<link rel="stylesheet" href="genpage/genstyle.css">
+<div class="col-lg-12" onload="loadAdminGen('ru','#genTextRu','#capTextRu')">
+  <div class="card">
+    <div class="card-header">
+      <h4>Главный блок</h4>
+    </div>
+    <div class="card-body">
+      <div class="custom-tab">
+
+        <nav>
+          <div class="nav nav-tabs" id="nav-tab" role="tablist">
+            <a class="nav-item nav-link active show" id="custom-nav-home-tab" data-toggle="tab" href="#custom-nav-home"
+              role="tab" aria-controls="custom-nav-home" aria-selected="true"
+              onclick="loadAdminGen('ru','#genTextRu','#capTextRu')">Русский</a>
+            <a class="nav-item nav-link" id="custom-nav-profile-tab" data-toggle="tab" href="#custom-nav-profile"
+              role="tab" aria-controls="custom-nav-profile" aria-selected="false"
+              onclick="loadAdminGen('en','#genTextEng','#capTextEng')">English</a>
+            <a class="nav-item nav-link" id="custom-nav-contact-tab" data-toggle="tab" href="#custom-nav-contact"
+              role="tab" aria-controls="custom-nav-contact" aria-selected="false"
+              onclick="loadAdminGen('kz','#genTextKz','#capTextKz')">Қазақша</a>
+          </div>
+        </nav>
+        <div class="tab-content pl-3 pt-2" id="nav-tabContent">
+          <!-- Русский -->
+          <div class="tab-pane fade active show" id="custom-nav-home" role="tabpanel"
+            aria-labelledby="custom-nav-home-tab">
+            <div class="card">
+              <div class="card-header">
+                <strong>Главный</strong> блок
+              </div>
+              <div class="card-body card-block">
+                <form action="#" method="post" class="form-inline gap20 align-top fd-column">
+                  <div class="form-group" style="width: 50%;"><label for="exampleInputName2"
+                      class="pr-1  form-control-label">Заголовок</label><textarea id="genTextRu"
+                      class="form-control w100"> </textarea></div>
+                  <div class="form-group" style="width: 50%;"><label for="exampleInputEmail2"
+                      class="px-1  form-control-label">Описание</label><textarea id="capTextRu" required=""
+                      class="form-control w100"> </textarea></div>
+                </form>
+              </div>
+              <div class="card-footer">
+                <button type="submit" class="btn btn-primary btn-sm"
+                  onclick="saveGenText('ru','#genTextRu','#capTextRu')">
+                  <i class="fa fa-dot-circle-o"></i> Сохранить
+                </button>
+                <button type="reset" class="btn btn-danger btn-sm"
+                  onclick="loadAdminGen('ru','#genTextRu','#capTextRu')">
+                  <i class="fa fa-ban"></i> Отменить
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- English -->
+          <div class="tab-pane fade" id="custom-nav-profile" role="tabpanel" aria-labelledby="custom-nav-profile-tab">
+            <div class="card">
+              <div class="card-header">
+                <strong>General</strong> block
+              </div>
+              <div class="card-body card-block">
+                <form action="#" method="post" class="form-inline gap20 align-top fd-column">
+                  <div class="form-group" style="width: 50%;"><label for="exampleInputName2"
+                      class="pr-1  form-control-label">General text</label><textarea id="genTextEng"
+                      class="form-control w100"> </textarea></div>
+                  <div class="form-group" style="width: 50%;"><label for="exampleInputEmail2"
+                      class="px-1  form-control-label">Caption</label><textarea id="capTextEng" required=""
+                      class="form-control w100"> </textarea></div>
+                </form>
+              </div>
+              <div class="card-footer">
+                <button type="submit" class="btn btn-primary btn-sm"
+                  onclick="saveGenText('en','#genTextEng','#capTextEng')">
+                  <i class="fa fa-dot-circle-o"></i> Submit
+                </button>
+                <button type="reset" class="btn btn-danger btn-sm"
+                  onclick="loadAdminGen('en','#genTextEng','#capTextEng')">
+                  <i class="fa fa-ban"></i> Reset
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- Қазақша -->
+          <div class="tab-pane fade" id="custom-nav-contact" role="tabpanel" aria-labelledby="custom-nav-contact-tab">
+            <div class="card">
+              <div class="card-header">
+                <strong>Басты</strong> бөлім
+              </div>
+              <div class="card-body card-block">
+                <form action="#" method="post" class="form-inline gap20 align-top fd-column">
+                  <div class="form-group" style="width: 50%;"><label for="exampleInputName2"
+                      class="pr-1  form-control-label">Негізгі мәтін</label><textarea id="genTextKz"
+                      class="form-control w100"> </textarea></div>
+                  <div class="form-group" style="width: 50%;"><label for="exampleInputEmail2"
+                      class="px-1  form-control-label">сипаттама</label><textarea id="capTextKz" required=""
+                      class="form-control w100"> </textarea></div>
+                </form>
+              </div>
+              <div class="card-footer">
+                <button type="submit" class="btn btn-primary btn-sm"
+                  onclick="saveGenText('kz','#genTextKz','#capTextKz')">
+                  <i class="fa fa-dot-circle-o"></i> Сақтау
+                </button>
+                <button type="reset" class="btn btn-danger btn-sm"
+                  onclick="loadAdminGen('kz','#genTextKz','#capTextKz')">
+                  <i class="fa fa-ban"></i> Жою
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Иконки ниже -->
+<div class="col-lg-12" onload="loadAdminGen('ru','#genTextRu','#capTextRu')">
+  <div class="card">
+    <div class="card-header">
+      <h4>Нижнее описание главного блока</h4>
+    </div>
+    <div class="card-body">
+      <div class="custom-tab">
+
+        <nav>
+          <div class="nav nav-tabs" id="nav-tab" role="tablist">
+            <a class="nav-item nav-link active show" id="custom-nav-home-tab" data-toggle="tab" href="#custom-icon-home"
+              role="tab" aria-controls="custom-nav-home" aria-selected="true"
+              onclick="readico('br', 'ru', '#genIcoTextRu', '#capIcoTextRu')">Русский</a>
+            <a class="nav-item nav-link" id="custom-nav-profile-tab" data-toggle="tab" href="#custom-icon-profile"
+              role="tab" aria-controls="custom-nav-profile" aria-selected="false"
+              onclick="readico('be', 'en', '#genIcoTextEn', '#capIcoTextEn')">English</a>
+            <a class="nav-item nav-link" id="custom-nav-contact-tab" data-toggle="tab" href="#custom-icon-contact"
+              role="tab" aria-controls="custom-nav-contact" aria-selected="false"
+              onclick="readico('bk', 'kz', '#genIcoTextKz', '#capIcoTextKz')">Қазақша</a>
+          </div>
+        </nav>
+        <div class="tab-content pl-3 pt-2" id="nav-tabContent">
+          <!-- Русский -->
+          <div class="tab-pane fade active show" id="custom-icon-home" role="tabpanel"
+            aria-labelledby="custom-nav-home-tab">
+            <div class="card">
+              <div class="card-header">
+                <strong>Нижнее</strong> иконки 1
+              </div>
+              <div class="card-body card-block">
+                <form action="#" method="post" class="form-inline gap20 align-top fd-column">
+                  <div class="form-group" style="width: 50%;"><label for="exampleInputName2"
+                      class="pr-1  form-control-label">Заголовок</label><textarea id="genIcoTextRu1"
+                      class="form-control w100"> </textarea></div>
+                  <div class="form-group" style="width: 50%;"><label for="exampleInputEmail2"
+                      class="px-1  form-control-label">Описание</label><textarea id="capIcoTextRu1" required=""
+                      class="form-control w100"> </textarea></div>
+                  <div class="form-group" style="width: 50%;"><label for="exampleInputEmail2"
+                      class="px-1  form-control-label">Иконка</label><input type="file" id="imageIcoRu1"
+                      accept="image/*">
+                  </div>
+
+                </form>
+              </div>
+              <div class="card-footer">
+                <button type="submit" class="btn btn-primary btn-sm"
+                  onclick="saveico('br1','ru','#genIcoTextRu1','#capIcoTextRu1','imageIcoRu1')">
+                  <i class="fa fa-dot-circle-o"></i> Сохранить
+                </button>
+                <button type="reset" class="btn btn-danger btn-sm"
+                  onclick="readico('br1','ru','#genIcoTextRu1','#capIcoTextRu1')">
+                  <i class="fa fa-ban"></i> Отменить
+                </button>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header">
+                <strong>Нижнее</strong> иконки 2
+              </div>
+              <div class="card-body card-block">
+                <form action="#" method="post" class="form-inline gap20 align-top fd-column">
+                  <div class="form-group" style="width: 50%;"><label for="exampleInputName2"
+                      class="pr-1  form-control-label">Заголовок</label><textarea id="genIcoTextRu2"
+                      class="form-control w100"> </textarea></div>
+                  <div class="form-group" style="width: 50%;"><label for="exampleInputEmail2"
+                      class="px-1  form-control-label">Описание</label><textarea id="capIcoTextRu2" required=""
+                      class="form-control w100"> </textarea></div>
+                  <div class="form-group" style="width: 50%;"><label for="exampleInputEmail2"
+                      class="px-1  form-control-label">Иконка</label><input type="file" id="imageIcoRu2"
+                      accept="image/*">
+                  </div>
+
+                </form>
+              </div>
+              <div class="card-footer">
+                <button type="submit" class="btn btn-primary btn-sm"
+                  onclick="saveico('br2','ru','#genIcoTextRu2','#capIcoTextRu2','imageIcoRu2')">
+                  <i class="fa fa-dot-circle-o"></i> Сохранить
+                </button>
+                <button type="reset" class="btn btn-danger btn-sm"
+                  onclick="readico('br2','ru','#genIcoTextRu2','#capIcoTextRu2')">
+                  <i class="fa fa-ban"></i> Отменить
+                </button>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header">
+                <strong>Нижнее</strong> иконки 3
+              </div>
+              <div class="card-body card-block">
+                <form action="#" method="post" class="form-inline gap20 align-top fd-column">
+                  <div class="form-group" style="width: 50%;"><label for="exampleInputName2"
+                      class="pr-1  form-control-label">Заголовок</label><textarea id="genIcoTextRu3"
+                      class="form-control w100"> </textarea></div>
+                  <div class="form-group" style="width: 50%;"><label for="exampleInputEmail2"
+                      class="px-1  form-control-label">Описание</label><textarea id="capIcoTextRu3" required=""
+                      class="form-control w100"> </textarea></div>
+                  <div class="form-group" style="width: 50%;"><label for="exampleInputEmail2"
+                      class="px-1  form-control-label">Иконка</label><input type="file" id="imageIcoRu3"
+                      accept="image/*">
+                  </div>
+
+                </form>
+              </div>
+              <div class="card-footer">
+                <button type="submit" class="btn btn-primary btn-sm"
+                  onclick="saveico('br3','ru','#genIcoTextRu3','#capIcoTextRu3','imageIcoRu3')">
+                  <i class="fa fa-dot-circle-o"></i> Сохранить
+                </button>
+                <button type="reset" class="btn btn-danger btn-sm"
+                  onclick="readico('br3','ru','#genIcoTextRu3','#capIcoTextRu3')">
+                  <i class="fa fa-ban"></i> Отменить
+                </button>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header">
+                <strong>Нижнее</strong> иконки 4
+              </div>
+              <div class="card-body card-block">
+                <form action="#" method="post" class="form-inline gap20 align-top fd-column">
+                  <div class="form-group" style="width: 50%;"><label for="exampleInputName2"
+                      class="pr-1  form-control-label">Заголовок</label><textarea id="genIcoTextRu4"
+                      class="form-control w100"> </textarea></div>
+                  <div class="form-group" style="width: 50%;"><label for="exampleInputEmail2"
+                      class="px-1  form-control-label">Описание</label><textarea id="capIcoTextRu4" required=""
+                      class="form-control w100"> </textarea></div>
+                  <div class="form-group" style="width: 50%;"><label for="exampleInputEmail2"
+                      class="px-1  form-control-label">Иконка</label><input type="file" id="imageIcoRu4"
+                      accept="image/*">
+                  </div>
+
+                </form>
+              </div>
+              <div class="card-footer">
+                <button type="submit" class="btn btn-primary btn-sm"
+                  onclick="saveico('br4','ru','#genIcoTextRu4','#capIcoTextRu4','imageIcoRu4')">
+                  <i class="fa fa-dot-circle-o"></i> Сохранить
+                </button>
+                <button type="reset" class="btn btn-danger btn-sm"
+                  onclick="readico('br4','ru','#genIcoTextRu4','#capIcoTextRu4')">
+                  <i class="fa fa-ban"></i> Отменить
+                </button>
+              </div>
+            </div>
+
+
+          </div>
+          <!-- English -->
+          <div class="tab-pane fade" id="custom-icon-profile" role="tabpanel" aria-labelledby="custom-nav-profile-tab">
+            <div class="card">
+              <div class="card-header">
+                <strong>Нижнее</strong> иконки 1
+              </div>
+              <div class="card-body card-block">
+                <form action="#" method="post" class="form-inline gap20 align-top fd-column">
+                  <div class="form-group" style="width: 50%;"><label for="exampleInputName2"
+                      class="pr-1  form-control-label">Заголовок</label><textarea id="genIcoTextEn1"
+                      class="form-control w100"> </textarea></div>
+                  <div class="form-group" style="width: 50%;"><label for="exampleInputEmail2"
+                      class="px-1  form-control-label">Описание</label><textarea id="capIcoTextEn1" required=""
+                      class="form-control w100"> </textarea></div>
+                  <div class="form-group" style="width: 50%;"><label for="exampleInputEmail2"
+                      class="px-1  form-control-label">Иконка</label><input type="file" id="imageIcoEn1"
+                      accept="image/*">
+                  </div>
+
+                </form>
+              </div>
+              <div class="card-footer">
+                <button type="submit" class="btn btn-primary btn-sm"
+                  onclick="saveico('be1','en','#genIcoTextEn1','#capIcoTextEn1','imageIcoEn1')">
+                  <i class="fa fa-dot-circle-o"></i> Save
+                </button>
+                <button type="reset" class="btn btn-danger btn-sm"
+                  onclick="readico('be1','en','#genIcoTextEn1','#capIcoTextEn1')">
+                  <i class="fa fa-ban"></i> Отменить
+                </button>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-header">
+                <strong>Нижнее</strong> иконки 2
+              </div>
+              <div class="card-body card-block">
+                <form action="#" method="post" class="form-inline gap20 align-top fd-column">
+                  <div class="form-group" style="width: 50%;"><label for="exampleInputName2"
+                      class="pr-1  form-control-label">Заголовок</label><textarea id="genIcoTextEn2"
+                      class="form-control w100"> </textarea></div>
+                  <div class="form-group" style="width: 50%;"><label for="exampleInputEmail2"
+                      class="px-1  form-control-label">Описание</label><textarea id="capIcoTextEn2" required=""
+                      class="form-control w100"> </textarea></div>
+                  <div class="form-group" style="width: 50%;"><label for="exampleInputEmail2"
+                      class="px-1  form-control-label">Иконка</label><input type="file" id="imageIcoEn2"
+                      accept="image/*">
+                  </div>
+
+                </form>
+              </div>
+              <div class="card-footer">
+                <button type="submit" class="btn btn-primary btn-sm"
+                  onclick="saveico('be2','en','#genIcoTextEn2','#capIcoTextEn2','imageIcoEn2')">
+                  <i class="fa fa-dot-circle-o"></i> Save
+                </button>
+                <button type="reset" class="btn btn-danger btn-sm"
+                  onclick="readico('be2','en','#genIcoTextEn2','#capIcoTextEn2')">
+                  <i class="fa fa-ban"></i> Отменить
+                </button>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-header">
+                <strong>Нижнее</strong> иконки 3
+              </div>
+              <div class="card-body card-block">
+                <form action="#" method="post" class="form-inline gap20 align-top fd-column">
+                  <div class="form-group" style="width: 50%;"><label for="exampleInputName2"
+                      class="pr-1  form-control-label">Заголовок</label><textarea id="genIcoTextEn3"
+                      class="form-control w100"> </textarea></div>
+                  <div class="form-group" style="width: 50%;"><label for="exampleInputEmail2"
+                      class="px-1  form-control-label">Описание</label><textarea id="capIcoTextEn3" required=""
+                      class="form-control w100"> </textarea></div>
+                  <div class="form-group" style="width: 50%;"><label for="exampleInputEmail2"
+                      class="px-1  form-control-label">Иконка</label><input type="file" id="imageIcoEn3"
+                      accept="image/*">
+                  </div>
+
+                </form>
+              </div>
+              <div class="card-footer">
+                <button type="submit" class="btn btn-primary btn-sm"
+                  onclick="saveico('be3','en','#genIcoTextEn3','#capIcoTextEn3','imageIcoEn3')">
+                  <i class="fa fa-dot-circle-o"></i> Save
+                </button>
+                <button type="reset" class="btn btn-danger btn-sm"
+                  onclick="readico('be3','en','#genIcoTextEn3','#capIcoTextEn3')">
+                  <i class="fa fa-ban"></i> Отменить
+                </button>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-header">
+                <strong>Нижнее</strong> иконки 4
+              </div>
+              <div class="card-body card-block">
+                <form action="#" method="post" class="form-inline gap20 align-top fd-column">
+                  <div class="form-group" style="width: 50%;"><label for="exampleInputName2"
+                      class="pr-1  form-control-label">Заголовок</label><textarea id="genIcoTextEn4"
+                      class="form-control w100"> </textarea></div>
+                  <div class="form-group" style="width: 50%;"><label for="exampleInputEmail2"
+                      class="px-1  form-control-label">Описание</label><textarea id="capIcoTextEn4" required=""
+                      class="form-control w100"> </textarea></div>
+                  <div class="form-group" style="width: 50%;"><label for="exampleInputEmail2"
+                      class="px-1  form-control-label">Иконка</label><input type="file" id="imageIcoEn4"
+                      accept="image/*">
+                  </div>
+
+                </form>
+              </div>
+              <div class="card-footer">
+                <button type="submit" class="btn btn-primary btn-sm"
+                  onclick="saveico('be4','en','#genIcoTextEn4','#capIcoTextEn4','imageIcoEn4')">
+                  <i class="fa fa-dot-circle-o"></i> Save
+                </button>
+                <button type="reset" class="btn btn-danger btn-sm"
+                  onclick="readico('be4','en','#genIcoTextEn4','#capIcoTextEn4')">
+                  <i class="fa fa-ban"></i> Отменить
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- Қазақша -->
+          <div class="tab-pane fade" id="custom-icon-contact" role="tabpanel" aria-labelledby="custom-nav-contact-tab">
+
+            <div class="card">
+              <div class="card-header">
+                <strong>Нижнее</strong> иконки 1
+              </div>
+              <div class="card-body card-block">
+                <form action="#" method="post" class="form-inline gap20 align-top fd-column">
+                  <div class="form-group" style="width: 50%;"><label for="exampleInputName2"
+                      class="pr-1  form-control-label">Заголовок</label><textarea id="genIcoTextKz1"
+                      class="form-control w100"> </textarea></div>
+                  <div class="form-group" style="width: 50%;"><label for="exampleInputEmail2"
+                      class="px-1  form-control-label">Описание</label><textarea id="capIcoTextKz1" required=""
+                      class="form-control w100"> </textarea></div>
+                  <div class="form-group" style="width: 50%;"><label for="exampleInputEmail2"
+                      class="px-1  form-control-label">Иконка</label><input type="file" id="imageIcoKz1"
+                      accept="image/*">
+                  </div>
+
+                </form>
+              </div>
+              <div class="card-footer">
+                <button type="submit" class="btn btn-primary btn-sm"
+                  onclick="saveico('bk1','kz','#genIcoTextKz1','#capIcoTextKz1','imageIcoKz1')">
+                  <i class="fa fa-dot-circle-o"></i> Save
+                </button>
+                <button type="reset" class="btn btn-danger btn-sm"
+                  onclick="readico('bk1','kz','#genIcoTextKz1','#capIcoTextKz1')">
+                  <i class="fa fa-ban"></i> Отменить
+                </button>
+              </div>
+            </div>
+
+            <!-- Блок 2 -->
+            <div class="card">
+              <div class="card-header">
+                <strong>Нижнее</strong> иконки 2
+              </div>
+              <div class="card-body card-block">
+                <form action="#" method="post" class="form-inline gap20 align-top fd-column">
+                  <div class="form-group" style="width: 50%;"><label for="exampleInputName2"
+                      class="pr-1  form-control-label">Заголовок</label><textarea id="genIcoTextKz2"
+                      class="form-control w100"> </textarea></div>
+                  <div class="form-group" style="width: 50%;"><label for="exampleInputEmail2"
+                      class="px-1  form-control-label">Описание</label><textarea id="capIcoTextKz2" required=""
+                      class="form-control w100"> </textarea></div>
+                  <div class="form-group" style="width: 50%;"><label for="exampleInputEmail2"
+                      class="px-1  form-control-label">Иконка</label><input type="file" id="imageIcoKz2"
+                      accept="image/*">
+                  </div>
+
+                </form>
+              </div>
+              <div class="card-footer">
+                <button type="submit" class="btn btn-primary btn-sm"
+                  onclick="saveico('bk2','kz','#genIcoTextKz2','#capIcoTextKz2','imageIcoKz2')">
+                  <i class="fa fa-dot-circle-o"></i> Save
+                </button>
+                <button type="reset" class="btn btn-danger btn-sm"
+                  onclick="readico('bk2','kz','#genIcoTextKz2','#capIcoTextKz2')">
+                  <i class="fa fa-ban"></i> Отменить
+                </button>
+              </div>
+            </div>
+
+            <!-- Блок 3 -->
+            <div class="card">
+              <div class="card-header">
+                <strong>Нижнее</strong> иконки 3
+              </div>
+              <div class="card-body card-block">
+                <form action="#" method="post" class="form-inline gap20 align-top fd-column">
+                  <div class="form-group" style="width: 50%;"><label for="exampleInputName2"
+                      class="pr-1  form-control-label">Заголовок</label><textarea id="genIcoTextKz3"
+                      class="form-control w100"> </textarea></div>
+                  <div class="form-group" style="width: 50%;"><label for="exampleInputEmail2"
+                      class="px-1  form-control-label">Описание</label><textarea id="capIcoTextKz3" required=""
+                      class="form-control w100"> </textarea></div>
+                  <div class="form-group" style="width: 50%;"><label for="exampleInputEmail2"
+                      class="px-1  form-control-label">Иконка</label><input type="file" id="imageIcoKz3"
+                      accept="image/*">
+                  </div>
+
+                </form>
+              </div>
+              <div class="card-footer">
+                <button type="submit" class="btn btn-primary btn-sm"
+                  onclick="saveico('bk3','kz','#genIcoTextKz3','#capIcoTextKz3','imageIcoKz3')">
+                  <i class="fa fa-dot-circle-o"></i> Save
+                </button>
+                <button type="reset" class="btn btn-danger btn-sm"
+                  onclick="readico('bk3','kz','#genIcoTextKz3','#capIcoTextKz3')">
+                  <i class="fa fa-ban"></i> Отменить
+                </button>
+              </div>
+            </div>
+            <!-- Блок 4 -->
+            <div class="card">
+              <div class="card-header">
+                <strong>Нижнее</strong> иконки 4
+              </div>
+              <div class="card-body card-block">
+                <form action="#" method="post" class="form-inline gap20 align-top fd-column">
+                  <div class="form-group" style="width: 50%;"><label for="exampleInputName2"
+                      class="pr-1  form-control-label">Заголовок</label><textarea id="genIcoTextKz4"
+                      class="form-control w100"> </textarea></div>
+                  <div class="form-group" style="width: 50%;"><label for="exampleInputEmail2"
+                      class="px-1  form-control-label">Описание</label><textarea id="capIcoTextKz4" required=""
+                      class="form-control w100"> </textarea></div>
+                  <div class="form-group" style="width: 50%;"><label for="exampleInputEmail2"
+                      class="px-1  form-control-label">Иконка</label><input type="file" id="imageIcoKz4"
+                      accept="image/*">
+                  </div>
+
+                </form>
+              </div>
+              <div class="card-footer">
+                <button type="submit" class="btn btn-primary btn-sm"
+                  onclick="saveico('bk4','kz','#genIcoTextKz4','#capIcoTextKz4','imageIcoKz4')">
+                  <i class="fa fa-dot-circle-o"></i> Save
+                </button>
+                <button type="reset" class="btn btn-danger btn-sm"
+                  onclick="readico('bk4','kz','#genIcoTextKz4','#capIcoTextKz4')">
+                  <i class="fa fa-ban"></i> Отменить
+                </button>
+              </div>
+            </div>
+            <!-- Конец -->
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

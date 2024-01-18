@@ -1,0 +1,42 @@
+a img, :link img, :visited img {
+	border: 0;
+}
+h1, h2, h3, h4, h5, h6, p {
+    margin:0;
+    padding: 0;
+}
+ol, ul {
+	list-style: none;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none;
+}
+img {
+    max-width: 100%;
+    display: block;
+}
+input, button, textarea, a {
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    font: inherit;
+    outline: none;
+}
+a{
+    color: #fff;
+    text-decoration: none;
+}
+html:root{
+    --swiper-theme-color: #118BDD !important;
+}
+html:root {
+    --swiper-navigation-size: 28px;
+}

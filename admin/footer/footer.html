@@ -1,0 +1,30 @@
+<div class="card">
+    <div class="card-header">
+        <strong>Реквизиты</strong>
+    </div>
+    <div class="card-body card-block">
+        <form action="#" method="post" class="form-inline gap20 align-top fd-column">
+            <div class="form-group" style="width: 100%;"><label for="exampleInputName2"
+                    class="pr-1  form-control-label">Русский</label><textarea id="RekvizidCardRu"
+                    class="form-control w100" style="width: 90%;"> </textarea></div>
+            <div class="form-group" style="width: 100%;"><label for="exampleInputName2"
+                    class="pr-1  form-control-label">English</label><textarea id="RekvizidCardEn"
+                    class="form-control w100" style="width: 90%;"> </textarea>
+            </div>
+            <div class="form-group" style="width: 100%;"><label for="exampleInputName2"
+                    class="pr-1  form-control-label">Қазақша</label><textarea id="RekvizidCardKz"
+                    class="form-control w100" style="width: 90%;"> </textarea>
+            </div>
+        </form>
+    </div>
+    <div class="card-footer">
+        <button type="submit" class="btn btn-primary btn-sm"
+            onclick="saveRekvizidCardAdres('#RekvizidCardRu','#RekvizidCardEn','#RekvizidCardKz')">
+            <i class="fa fa-dot-circle-o"></i> Сохранить
+        </button>
+        <button type="reset" class="btn btn-danger btn-sm"
+            onclick="loadRekvizidCardTitle('#RekvizidCardRu','#RekvizidCardEn','#RekvizidCardKz')">
+            <i class="fa fa-ban"></i> Отменить
+        </button>
+    </div>
+</div>

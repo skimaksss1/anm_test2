@@ -1,0 +1,711 @@
+<link rel="stylesheet" href="genpage/genstyle.css">
+<div class="col-lg-12" onload="loadAdminGenProduct('ru','#genProductTextRu')">
+    <div class="card">
+        <div class="card-header card-admin">
+            <h4>Наша продукция</h4>
+            <button type="button" class="btn btn-primary" onclick="scrit('cardProductGen')"><i class="fa fa-bars"></i> Скрыть</button>
+        </div>
+        <div class="card-body" id="cardProductGen">
+            <div class="custom-tab">
+
+                <nav>
+                    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                        <a class="nav-item nav-link active show" id="custom-nav-home-tab" data-toggle="tab"
+                            href="#custom-nav-home" role="tab" aria-controls="custom-nav-home" aria-selected="true"
+                            onclick="loadAdminGenProduct('ru','#genProductTextRu')">Русский</a>
+                        <a class="nav-item nav-link" id="custom-nav-profile-tab" data-toggle="tab"
+                            href="#custom-nav-profile" role="tab" aria-controls="custom-nav-profile"
+                            aria-selected="false" onclick="loadAdminGenProduct('en','#genProductTextEn')">English</a>
+                        <a class="nav-item nav-link" id="custom-nav-contact-tab" data-toggle="tab"
+                            href="#custom-nav-contact" role="tab" aria-controls="custom-nav-contact"
+                            aria-selected="false" onclick="loadAdminGenProduct('kz','#genProductTextKz')">Қазақша</a>
+                    </div>
+                </nav>
+                <div class="tab-content pl-3 pt-2" id="nav-tabContent">
+                    <!-- Русский -->
+                    <div class="tab-pane fade active show" id="custom-nav-home" role="tabpanel"
+                        aria-labelledby="custom-nav-home-tab">
+                        <div class="card">
+                            <div class="card-header">
+                                <strong>Главный</strong> блок
+                            </div>
+                            <div class="card-body card-block">
+                                <form action="#" method="post" class="form-inline gap20 align-top fd-column">
+                                    <div class="form-group" style="width: 50%;"><label for="exampleInputName2"
+                                            class="pr-1  form-control-label">Заголовок</label><textarea
+                                            id="genProductTextRu" class="form-control w100"> </textarea></div>
+                                </form>
+                            </div>
+                            <div class="card-footer">
+                                <button type="submit" class="btn btn-primary btn-sm"
+                                    onclick="saveGenProductText('ru','#genProductTextRu')">
+                                    <i class="fa fa-dot-circle-o"></i> Сохранить
+                                </button>
+                                <button type="reset" class="btn btn-danger btn-sm"
+                                    onclick="loadAdminGenProduct('ru','#genProductTextRu')">
+                                    <i class="fa fa-ban"></i> Отменить
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- English -->
+                    <div class="tab-pane fade" id="custom-nav-profile" role="tabpanel"
+                        aria-labelledby="custom-nav-home-tab">
+                        <div class="card">
+                            <div class="card-header">
+                                <strong>Главный</strong> блок
+                            </div>
+                            <div class="card-body card-block">
+                                <form action="#" method="post" class="form-inline gap20 align-top fd-column">
+                                    <div class="form-group" style="width: 50%;"><label for="exampleInputName2"
+                                            class="pr-1  form-control-label">Заголовок</label><textarea
+                                            id="genProductTextEn" class="form-control w100"> </textarea></div>
+                                </form>
+                            </div>
+                            <div class="card-footer">
+                                <button type="submit" class="btn btn-primary btn-sm"
+                                    onclick="saveGenProductText('en','#genProductTextEn')">
+                                    <i class="fa fa-dot-circle-o"></i> Сохранить
+                                </button>
+                                <button type="reset" class="btn btn-danger btn-sm"
+                                    onclick="loadAdminGenProduct('en','#genProductTextEn')">
+                                    <i class="fa fa-ban"></i> Отменить
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Қазақша -->
+                    <div class="tab-pane fade" id="custom-nav-contact" role="tabpanel"
+                        aria-labelledby="custom-nav-home-tab">
+                        <div class="card">
+                            <div class="card-header">
+                                <strong>Главный</strong> блок
+                            </div>
+                            <div class="card-body card-block">
+                                <form action="#" method="post" class="form-inline gap20 align-top fd-column">
+                                    <div class="form-group" style="width: 50%;"><label for="exampleInputName2"
+                                            class="pr-1  form-control-label">Заголовок</label><textarea
+                                            id="genProductTextKz" class="form-control w100"> </textarea></div>
+                                </form>
+                            </div>
+                            <div class="card-footer">
+                                <button type="submit" class="btn btn-primary btn-sm"
+                                    onclick="saveGenProductText('kz','#genProductTextKz')">
+                                    <i class="fa fa-dot-circle-o"></i> Сохранить
+                                </button>
+                                <button type="reset" class="btn btn-danger btn-sm"
+                                    onclick="loadAdminGenProduct('kz','#genProductTextKz')">
+                                    <i class="fa fa-ban"></i> Отменить
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Название продукций -->
+<div class="col-lg-12" onload="loadAdminGenProductName('ru','#genProductNameRu','1','+')">
+    <div class="card">
+        <div class="card-header card-admin">
+            <h4>Название продукций</h4>
+            <button type="button" class="btn btn-primary" onclick="scrit('cardNameProduct')"><i class="fa fa-bars"></i> Скрыть</button>
+        </div>
+        <div class="card-body" id="cardNameProduct">
+            <div class="custom-tab">
+
+                <nav>
+                    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                        <a class="nav-item nav-link active show" id="custom-nav-home-tab" data-toggle="tab"
+                            href="#custom-icon-home" role="tab" aria-controls="custom-nav-home" aria-selected="true"
+                            onclick="loadAdminGenProductName('ru','#genProductNameRu','1','+')">Русский</a>
+                        <a class="nav-item nav-link" id="custom-nav-profile-tab" data-toggle="tab"
+                            href="#custom-icon-profile" role="tab" aria-controls="custom-nav-profile"
+                            aria-selected="false"
+                            onclick="loadAdminGenProductName('en','#genProductNameEn','1','+')">English</a>
+                        <a class="nav-item nav-link" id="custom-nav-contact-tab" data-toggle="tab"
+                            href="#custom-icon-contact" role="tab" aria-controls="custom-nav-contact"
+                            aria-selected="false"
+                            onclick="loadAdminGenProductName('kz','#genProductNameKz','1','+')">Қазақша</a>
+                    </div>
+                </nav>
+                <div class="tab-content pl-3 pt-2" id="nav-tabContent">
+                    <!-- Русский -->
+                    <div class="tab-pane fade active show" id="custom-icon-home" role="tabpanel"
+                        aria-labelledby="custom-nav-home-tab">
+                        <div class="card">
+                            <div class="card-header">
+                                <strong>Продкуция</strong> 1
+                            </div>
+                            <div class="card-body card-block">
+                                <form action="#" method="post" class="form-inline gap20 align-top fd-column">
+                                    <div class="form-group" style="width: 50%;"><label for="exampleInputName2"
+                                            class="pr-1  form-control-label">Заголовок</label><textarea
+                                            id="genProductNameRu1" class="form-control w100"> </textarea></div>
+
+                                </form>
+                            </div>
+                            <div class="card-footer">
+                                <button type="submit" class="btn btn-primary btn-sm"
+                                    onclick="saveGenProductName('ru','#genProductNameRu1','1')">
+                                    <i class="fa fa-dot-circle-o"></i> Сохранить
+                                </button>
+                                <button type="reset" class="btn btn-danger btn-sm"
+                                    onclick="loadAdminGenProductName('ru','#genProductNameRu1','1')">
+                                    <i class="fa fa-ban"></i> Отменить
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                <strong>Продкуция</strong> 2
+                            </div>
+                            <div class="card-body card-block">
+                                <form action="#" method="post" class="form-inline gap20 align-top fd-column">
+                                    <div class="form-group" style="width: 50%;"><label for="exampleInputName2"
+                                            class="pr-1  form-control-label">Заголовок</label><textarea
+                                            id="genProductNameRu2" class="form-control w100"> </textarea></div>
+
+                                </form>
+                            </div>
+                            <div class="card-footer">
+                                <button type="submit" class="btn btn-primary btn-sm"
+                                    onclick="saveGenProductName('ru','#genProductNameRu2','2')">
+                                    <i class="fa fa-dot-circle-o"></i> Сохранить
+                                </button>
+                                <button type="reset" class="btn btn-danger btn-sm"
+                                    onclick="loadAdminGenProductName('ru','#genProductNameRu2','2')">
+                                    <i class="fa fa-ban"></i> Отменить
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                <strong>Продкуция</strong> 3
+                            </div>
+                            <div class="card-body card-block">
+                                <form action="#" method="post" class="form-inline gap20 align-top fd-column">
+                                    <div class="form-group" style="width: 50%;"><label for="exampleInputName2"
+                                            class="pr-1  form-control-label">Заголовок</label><textarea
+                                            id="genProductNameRu3" class="form-control w100"> </textarea></div>
+
+                                </form>
+                            </div>
+                            <div class="card-footer">
+                                <button type="submit" class="btn btn-primary btn-sm"
+                                    onclick="saveGenProductName('ru','#genProductNameRu3','3')">
+                                    <i class="fa fa-dot-circle-o"></i> Сохранить
+                                </button>
+                                <button type="reset" class="btn btn-danger btn-sm"
+                                    onclick="loadAdminGenProductName('ru','#genProductNameRu3','3')">
+                                    <i class="fa fa-ban"></i> Отменить
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                <strong>Продкуция</strong> 4
+                            </div>
+                            <div class="card-body card-block">
+                                <form action="#" method="post" class="form-inline gap20 align-top fd-column">
+                                    <div class="form-group" style="width: 50%;"><label for="exampleInputName2"
+                                            class="pr-1  form-control-label">Заголовок</label><textarea
+                                            id="genProductNameRu4" class="form-control w100"> </textarea></div>
+
+                                </form>
+                            </div>
+                            <div class="card-footer">
+                                <button type="submit" class="btn btn-primary btn-sm"
+                                    onclick="saveGenProductName('ru','#genProductNameRu4','4')">
+                                    <i class="fa fa-dot-circle-o"></i> Сохранить
+                                </button>
+                                <button type="reset" class="btn btn-danger btn-sm"
+                                    onclick="loadAdminGenProductName('ru','#genProductNameRu4','4')">
+                                    <i class="fa fa-ban"></i> Отменить
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                <strong>Продкуция</strong> 5
+                            </div>
+                            <div class="card-body card-block">
+                                <form action="#" method="post" class="form-inline gap20 align-top fd-column">
+                                    <div class="form-group" style="width: 50%;"><label for="exampleInputName2"
+                                            class="pr-1  form-control-label">Заголовок</label><textarea
+                                            id="genProductNameRu5" class="form-control w100"> </textarea></div>
+
+                                </form>
+                            </div>
+                            <div class="card-footer">
+                                <button type="submit" class="btn btn-primary btn-sm"
+                                    onclick="saveGenProductName('ru','#genProductNameRu5','5')">
+                                    <i class="fa fa-dot-circle-o"></i> Сохранить
+                                </button>
+                                <button type="reset" class="btn btn-danger btn-sm"
+                                    onclick="loadAdminGenProductName('ru','#genProductNameRu5','5')">
+                                    <i class="fa fa-ban"></i> Отменить
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                <strong>Продкуция</strong> 6
+                            </div>
+                            <div class="card-body card-block">
+                                <form action="#" method="post" class="form-inline gap20 align-top fd-column">
+                                    <div class="form-group" style="width: 50%;"><label for="exampleInputName2"
+                                            class="pr-1  form-control-label">Заголовок</label><textarea
+                                            id="genProductNameRu6" class="form-control w100"> </textarea></div>
+
+                                </form>
+                            </div>
+                            <div class="card-footer">
+                                <button type="submit" class="btn btn-primary btn-sm"
+                                    onclick="saveGenProductName('ru','#genProductNameRu6','6')">
+                                    <i class="fa fa-dot-circle-o"></i> Сохранить
+                                </button>
+                                <button type="reset" class="btn btn-danger btn-sm"
+                                    onclick="loadAdminGenProductName('ru','#genProductNameRu6','6')">
+                                    <i class="fa fa-ban"></i> Отменить
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                <strong>Продкуция</strong> 7
+                            </div>
+                            <div class="card-body card-block">
+                                <form action="#" method="post" class="form-inline gap20 align-top fd-column">
+                                    <div class="form-group" style="width: 50%;"><label for="exampleInputName2"
+                                            class="pr-1  form-control-label">Заголовок</label><textarea
+                                            id="genProductNameRu7" class="form-control w100"> </textarea></div>
+
+                                </form>
+                            </div>
+                            <div class="card-footer">
+                                <button type="submit" class="btn btn-primary btn-sm"
+                                    onclick="saveGenProductName('ru','#genProductNameRu7','7')">
+                                    <i class="fa fa-dot-circle-o"></i> Сохранить
+                                </button>
+                                <button type="reset" class="btn btn-danger btn-sm"
+                                    onclick="loadAdminGenProductName('ru','#genProductNameRu7','7')">
+                                    <i class="fa fa-ban"></i> Отменить
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                <strong>Продкуция</strong> 8
+                            </div>
+                            <div class="card-body card-block">
+                                <form action="#" method="post" class="form-inline gap20 align-top fd-column">
+                                    <div class="form-group" style="width: 50%;"><label for="exampleInputName2"
+                                            class="pr-1  form-control-label">Заголовок</label><textarea
+                                            id="genProductNameRu8" class="form-control w100"> </textarea></div>
+
+                                </form>
+                            </div>
+                            <div class="card-footer">
+                                <button type="submit" class="btn btn-primary btn-sm"
+                                    onclick="saveGenProductName('ru','#genProductNameRu8','8')">
+                                    <i class="fa fa-dot-circle-o"></i> Сохранить
+                                </button>
+                                <button type="reset" class="btn btn-danger btn-sm"
+                                    onclick="loadAdminGenProductName('ru','#genProductNameRu8','8')">
+                                    <i class="fa fa-ban"></i> Отменить
+                                </button>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                    <!-- English -->
+                    <div class="tab-pane fade" id="custom-icon-profile" role="tabpanel"
+                        aria-labelledby="custom-nav-profile-tab">
+                        <div class="card">
+                            <div class="card-header">
+                                <strong>Продкуция</strong> 1
+                            </div>
+                            <div class="card-body card-block">
+                                <form action="#" method="post" class="form-inline gap20 align-top fd-column">
+                                    <div class="form-group" style="width: 50%;"><label for="exampleInputName2"
+                                            class="pr-1  form-control-label">Заголовок</label><textarea
+                                            id="genProductNameEn1" class="form-control w100"> </textarea></div>
+
+                                </form>
+                            </div>
+                            <div class="card-footer">
+                                <button type="submit" class="btn btn-primary btn-sm"
+                                    onclick="saveGenProductName('en','#genProductNameEn1','1')">
+                                    <i class="fa fa-dot-circle-o"></i> Сохранить
+                                </button>
+                                <button type="reset" class="btn btn-danger btn-sm"
+                                    onclick="loadAdminGenProductName('en','#genProductNameEn1','1')">
+                                    <i class="fa fa-ban"></i> Отменить
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                <strong>Продкуция</strong> 2
+                            </div>
+                            <div class="card-body card-block">
+                                <form action="#" method="post" class="form-inline gap20 align-top fd-column">
+                                    <div class="form-group" style="width: 50%;"><label for="exampleInputName2"
+                                            class="pr-1  form-control-label">Заголовок</label><textarea
+                                            id="genProductNameEn2" class="form-control w100"> </textarea></div>
+
+                                </form>
+                            </div>
+                            <div class="card-footer">
+                                <button type="submit" class="btn btn-primary btn-sm"
+                                    onclick="saveGenProductName('en','#genProductNameEn2','2')">
+                                    <i class="fa fa-dot-circle-o"></i> Сохранить
+                                </button>
+                                <button type="reset" class="btn btn-danger btn-sm"
+                                    onclick="loadAdminGenProductName('en','#genProductNameEn2','2')">
+                                    <i class="fa fa-ban"></i> Отменить
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                <strong>Продкуция</strong> 3
+                            </div>
+                            <div class="card-body card-block">
+                                <form action="#" method="post" class="form-inline gap20 align-top fd-column">
+                                    <div class="form-group" style="width: 50%;"><label for="exampleInputName2"
+                                            class="pr-1  form-control-label">Заголовок</label><textarea
+                                            id="genProductNameEn3" class="form-control w100"> </textarea></div>
+
+                                </form>
+                            </div>
+                            <div class="card-footer">
+                                <button type="submit" class="btn btn-primary btn-sm"
+                                    onclick="saveGenProductName('en','#genProductNameEn3','3')">
+                                    <i class="fa fa-dot-circle-o"></i> Сохранить
+                                </button>
+                                <button type="reset" class="btn btn-danger btn-sm"
+                                    onclick="loadAdminGenProductName('en','#genProductNameEn3','3')">
+                                    <i class="fa fa-ban"></i> Отменить
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                <strong>Продкуция</strong> 4
+                            </div>
+                            <div class="card-body card-block">
+                                <form action="#" method="post" class="form-inline gap20 align-top fd-column">
+                                    <div class="form-group" style="width: 50%;"><label for="exampleInputName2"
+                                            class="pr-1  form-control-label">Заголовок</label><textarea
+                                            id="genProductNameEn4" class="form-control w100"> </textarea></div>
+
+                                </form>
+                            </div>
+                            <div class="card-footer">
+                                <button type="submit" class="btn btn-primary btn-sm"
+                                    onclick="saveGenProductName('en','#genProductNameEn4','4')">
+                                    <i class="fa fa-dot-circle-o"></i> Сохранить
+                                </button>
+                                <button type="reset" class="btn btn-danger btn-sm"
+                                    onclick="loadAdminGenProductName('en','#genProductNameEn4','4')">
+                                    <i class="fa fa-ban"></i> Отменить
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                <strong>Продкуция</strong> 5
+                            </div>
+                            <div class="card-body card-block">
+                                <form action="#" method="post" class="form-inline gap20 align-top fd-column">
+                                    <div class="form-group" style="width: 50%;"><label for="exampleInputName2"
+                                            class="pr-1  form-control-label">Заголовок</label><textarea
+                                            id="genProductNameEn5" class="form-control w100"> </textarea></div>
+
+                                </form>
+                            </div>
+                            <div class="card-footer">
+                                <button type="submit" class="btn btn-primary btn-sm"
+                                    onclick="saveGenProductName('en','#genProductNameEn5','5')">
+                                    <i class="fa fa-dot-circle-o"></i> Сохранить
+                                </button>
+                                <button type="reset" class="btn btn-danger btn-sm"
+                                    onclick="loadAdminGenProductName('en','#genProductNameEn5','5')">
+                                    <i class="fa fa-ban"></i> Отменить
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                <strong>Продкуция</strong> 6
+                            </div>
+                            <div class="card-body card-block">
+                                <form action="#" method="post" class="form-inline gap20 align-top fd-column">
+                                    <div class="form-group" style="width: 50%;"><label for="exampleInputName2"
+                                            class="pr-1  form-control-label">Заголовок</label><textarea
+                                            id="genProductNameEn6" class="form-control w100"> </textarea></div>
+
+                                </form>
+                            </div>
+                            <div class="card-footer">
+                                <button type="submit" class="btn btn-primary btn-sm"
+                                    onclick="saveGenProductName('en','#genProductNameEn6','6')">
+                                    <i class="fa fa-dot-circle-o"></i> Сохранить
+                                </button>
+                                <button type="reset" class="btn btn-danger btn-sm"
+                                    onclick="loadAdminGenProductName('en','#genProductNameEn6','6')">
+                                    <i class="fa fa-ban"></i> Отменить
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                <strong>Продкуция</strong> 7
+                            </div>
+                            <div class="card-body card-block">
+                                <form action="#" method="post" class="form-inline gap20 align-top fd-column">
+                                    <div class="form-group" style="width: 50%;"><label for="exampleInputName2"
+                                            class="pr-1  form-control-label">Заголовок</label><textarea
+                                            id="genProductNameEn7" class="form-control w100"> </textarea></div>
+
+                                </form>
+                            </div>
+                            <div class="card-footer">
+                                <button type="submit" class="btn btn-primary btn-sm"
+                                    onclick="saveGenProductName('en','#genProductNameEn7','7')">
+                                    <i class="fa fa-dot-circle-o"></i> Сохранить
+                                </button>
+                                <button type="reset" class="btn btn-danger btn-sm"
+                                    onclick="loadAdminGenProductName('en','#genProductNameEn7','7')">
+                                    <i class="fa fa-ban"></i> Отменить
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                <strong>Продкуция</strong> 8
+                            </div>
+                            <div class="card-body card-block">
+                                <form action="#" method="post" class="form-inline gap20 align-top fd-column">
+                                    <div class="form-group" style="width: 50%;"><label for="exampleInputName2"
+                                            class="pr-1  form-control-label">Заголовок</label><textarea
+                                            id="genProductNameEn8" class="form-control w100"> </textarea></div>
+
+                                </form>
+                            </div>
+                            <div class="card-footer">
+                                <button type="submit" class="btn btn-primary btn-sm"
+                                    onclick="saveGenProductName('en','#genProductNameEn8','8')">
+                                    <i class="fa fa-dot-circle-o"></i> Сохранить
+                                </button>
+                                <button type="reset" class="btn btn-danger btn-sm"
+                                    onclick="loadAdminGenProductName('en','#genProductNameEn8','8')">
+                                    <i class="fa fa-ban"></i> Отменить
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Қазақша -->
+                    <div class="tab-pane fade" id="custom-icon-contact" role="tabpanel"
+                        aria-labelledby="custom-nav-contact-tab">
+
+                        <div class="card">
+                            <div class="card-header">
+                                <strong>Продкуция</strong> 1
+                            </div>
+                            <div class="card-body card-block">
+                                <form action="#" method="post" class="form-inline gap20 align-top fd-column">
+                                    <div class="form-group" style="width: 50%;"><label for="exampleInputName2"
+                                            class="pr-1  form-control-label">Заголовок</label><textarea
+                                            id="genProductNameKz1" class="form-control w100"> </textarea></div>
+
+                                </form>
+                            </div>
+                            <div class="card-footer">
+                                <button type="submit" class="btn btn-primary btn-sm"
+                                    onclick="saveGenProductName('kz','#genProductNameKz1','1')">
+                                    <i class="fa fa-dot-circle-o"></i> Сохранить
+                                </button>
+                                <button type="reset" class="btn btn-danger btn-sm"
+                                    onclick="loadAdminGenProductName('kz','#genProductNameKz1','1')">
+                                    <i class="fa fa-ban"></i> Отменить
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                <strong>Продкуция</strong> 2
+                            </div>
+                            <div class="card-body card-block">
+                                <form action="#" method="post" class="form-inline gap20 align-top fd-column">
+                                    <div class="form-group" style="width: 50%;"><label for="exampleInputName2"
+                                            class="pr-1  form-control-label">Заголовок</label><textarea
+                                            id="genProductNameKz2" class="form-control w100"> </textarea></div>
+
+                                </form>
+                            </div>
+                            <div class="card-footer">
+                                <button type="submit" class="btn btn-primary btn-sm"
+                                    onclick="saveGenProductName('kz','#genProductNameKz2','2')">
+                                    <i class="fa fa-dot-circle-o"></i> Сохранить
+                                </button>
+                                <button type="reset" class="btn btn-danger btn-sm"
+                                    onclick="loadAdminGenProductName('kz','#genProductNameKz2','2')">
+                                    <i class="fa fa-ban"></i> Отменить
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                <strong>Продкуция</strong> 3
+                            </div>
+                            <div class="card-body card-block">
+                                <form action="#" method="post" class="form-inline gap20 align-top fd-column">
+                                    <div class="form-group" style="width: 50%;"><label for="exampleInputName2"
+                                            class="pr-1  form-control-label">Заголовок</label><textarea
+                                            id="genProductNameKz3" class="form-control w100"> </textarea></div>
+
+                                </form>
+                            </div>
+                            <div class="card-footer">
+                                <button type="submit" class="btn btn-primary btn-sm"
+                                    onclick="saveGenProductName('kz','#genProductNameKz3','3')">
+                                    <i class="fa fa-dot-circle-o"></i> Сохранить
+                                </button>
+                                <button type="reset" class="btn btn-danger btn-sm"
+                                    onclick="loadAdminGenProductName('kz','#genProductNameKz3','3')">
+                                    <i class="fa fa-ban"></i> Отменить
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                <strong>Продкуция</strong> 4
+                            </div>
+                            <div class="card-body card-block">
+                                <form action="#" method="post" class="form-inline gap20 align-top fd-column">
+                                    <div class="form-group" style="width: 50%;"><label for="exampleInputName2"
+                                            class="pr-1  form-control-label">Заголовок</label><textarea
+                                            id="genProductNameKz4" class="form-control w100"> </textarea></div>
+
+                                </form>
+                            </div>
+                            <div class="card-footer">
+                                <button type="submit" class="btn btn-primary btn-sm"
+                                    onclick="saveGenProductName('kz','#genProductNameKz4','4')">
+                                    <i class="fa fa-dot-circle-o"></i> Сохранить
+                                </button>
+                                <button type="reset" class="btn btn-danger btn-sm"
+                                    onclick="loadAdminGenProductName('kz','#genProductNameKz4','4')">
+                                    <i class="fa fa-ban"></i> Отменить
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                <strong>Продкуция</strong> 5
+                            </div>
+                            <div class="card-body card-block">
+                                <form action="#" method="post" class="form-inline gap20 align-top fd-column">
+                                    <div class="form-group" style="width: 50%;"><label for="exampleInputName2"
+                                            class="pr-1  form-control-label">Заголовок</label><textarea
+                                            id="genProductNameKz5" class="form-control w100"> </textarea></div>
+
+                                </form>
+                            </div>
+                            <div class="card-footer">
+                                <button type="submit" class="btn btn-primary btn-sm"
+                                    onclick="saveGenProductName('kz','#genProductNameKz5','5')">
+                                    <i class="fa fa-dot-circle-o"></i> Сохранить
+                                </button>
+                                <button type="reset" class="btn btn-danger btn-sm"
+                                    onclick="loadAdminGenProductName('kz','#genProductNameKz5','5')">
+                                    <i class="fa fa-ban"></i> Отменить
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                <strong>Продкуция</strong> 6
+                            </div>
+                            <div class="card-body card-block">
+                                <form action="#" method="post" class="form-inline gap20 align-top fd-column">
+                                    <div class="form-group" style="width: 50%;"><label for="exampleInputName2"
+                                            class="pr-1  form-control-label">Заголовок</label><textarea
+                                            id="genProductNameKz6" class="form-control w100"> </textarea></div>
+
+                                </form>
+                            </div>
+                            <div class="card-footer">
+                                <button type="submit" class="btn btn-primary btn-sm"
+                                    onclick="saveGenProductName('kz','#genProductNameKz6','6')">
+                                    <i class="fa fa-dot-circle-o"></i> Сохранить
+                                </button>
+                                <button type="reset" class="btn btn-danger btn-sm"
+                                    onclick="loadAdminGenProductName('kz','#genProductNameKz6','6')">
+                                    <i class="fa fa-ban"></i> Отменить
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                <strong>Продкуция</strong> 6
+                            </div>
+                            <div class="card-body card-block">
+                                <form action="#" method="post" class="form-inline gap20 align-top fd-column">
+                                    <div class="form-group" style="width: 50%;"><label for="exampleInputName2"
+                                            class="pr-1  form-control-label">Заголовок</label><textarea
+                                            id="genProductNameKz7" class="form-control w100"> </textarea></div>
+
+                                </form>
+                            </div>
+                            <div class="card-footer">
+                                <button type="submit" class="btn btn-primary btn-sm"
+                                    onclick="saveGenProductName('kz','#genProductNameKz7','7')">
+                                    <i class="fa fa-dot-circle-o"></i> Сохранить
+                                </button>
+                                <button type="reset" class="btn btn-danger btn-sm"
+                                    onclick="loadAdminGenProductName('kz','#genProductNameKz7','7')">
+                                    <i class="fa fa-ban"></i> Отменить
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                <strong>Продкуция</strong> 8
+                            </div>
+                            <div class="card-body card-block">
+                                <form action="#" method="post" class="form-inline gap20 align-top fd-column">
+                                    <div class="form-group" style="width: 50%;"><label for="exampleInputName2"
+                                            class="pr-1  form-control-label">Заголовок</label><textarea
+                                            id="genProductNameKz8" class="form-control w100"> </textarea></div>
+
+                                </form>
+                            </div>
+                            <div class="card-footer">
+                                <button type="submit" class="btn btn-primary btn-sm"
+                                    onclick="saveGenProductName('kz','#genProductNameKz8','8')">
+                                    <i class="fa fa-dot-circle-o"></i> Сохранить
+                                </button>
+                                <button type="reset" class="btn btn-danger btn-sm"
+                                    onclick="loadAdminGenProductName('kz','#genProductNameKz8','8')">
+                                    <i class="fa fa-ban"></i> Отменить
+                                </button>
+                            </div>
+                        </div>
+                        <!-- Конец -->
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+

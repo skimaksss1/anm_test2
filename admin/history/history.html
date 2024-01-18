@@ -1,0 +1,410 @@
+<style>
+    .toolbar a {
+        display: inline-block;
+        border: 1px solid #888;
+        padding: 5px 8px;
+        margin: 0 5px 10px 0;
+        color: #000;
+        border-radius: 3px;
+        font-size: 12px;
+        box-shadow: 1px 1px 2px #ddd;
+        background: #fff;
+        vertical-align: top;
+        text-decoration: none;
+    }
+
+    .toolbar select {
+        display: inline-block;
+        height: 28px;
+        line-height: 28px;
+        background: #fff;
+        padding: 0;
+        margin: 0 5px 10px 0;
+        color: #000;
+        box-shadow: 1px 1px 2px #ddd;
+        border-radius: 3px;
+        vertical-align: top;
+        font-size: 12px;
+    }
+
+    .toolbar input {
+        display: inline-block;
+        height: 28px;
+        line-height: 28px;
+        background: #fff;
+        padding: 0;
+        margin: 0 5px 10px 0;
+        color: #000;
+        box-shadow: 1px 1px 2px #ddd;
+        border-radius: 3px;
+        vertical-align: top;
+        font-size: 12px;
+    }
+
+    .toolbar span {
+        display: inline-block;
+        height: 30px;
+        line-height: 30px;
+        padding: 0;
+        margin: 0 0 10px 0;
+        color: #000;
+        vertical-align: top;
+        font-size: 12px;
+    }
+
+    .editor {
+        display: inline-block;
+        min-height: 150px;
+        border: 1px solid #ddd;
+        padding: 10px;
+        min-width: 100%;
+        border-radius: 2px;
+        box-shadow: 1px 1px 2px #ddd;
+        background: #fff;
+    }
+
+    .editor2 {
+        display: inline-block;
+        min-height: 150px;
+        border: 1px solid #ddd;
+        padding: 10px;
+        min-width: 100%;
+        border-radius: 2px;
+        box-shadow: 1px 1px 2px #ddd;
+        background: #fff;
+    }
+</style>
+
+
+<div class="col-lg-12" onload="loadAdminGenAbout('ru','#genAboutTitleRu','#genAboutTextRu')">
+    <div class="card">
+        <div class="card-header">
+            <h4>История компании</h4>
+        </div>
+        <div class="card-body">
+            <div class="custom-tab">
+
+                <nav>
+                    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                        <a class="nav-item nav-link active show" id="custom-nav-home-tab" data-toggle="tab"
+                            href="#custom-nav-home" role="tab" aria-controls="custom-nav-home" aria-selected="true"
+                            onclick="loadAdminGenAbout('ru','#genAboutTitleRu','#genAboutTextRu')">Русский</a>
+                        <a class="nav-item nav-link" id="custom-nav-profile-tab" data-toggle="tab"
+                            href="#custom-nav-profile" role="tab" aria-controls="custom-nav-profile"
+                            aria-selected="false" onclick="loadAdminGenProduct('en','#genProductTextEn')">English</a>
+                        <a class="nav-item nav-link" id="custom-nav-contact-tab" data-toggle="tab"
+                            href="#custom-nav-contact" role="tab" aria-controls="custom-nav-contact"
+                            aria-selected="false" onclick="loadAdminGenProduct('kz','#genProductTextKz')">Қазақша</a>
+                    </div>
+                </nav>
+                <div class="tab-content pl-3 pt-2" id="nav-tabContent">
+                    <!-- Русский -->
+                    <div class="tab-pane fade active show" id="custom-nav-home" role="tabpanel"
+                        aria-labelledby="custom-nav-home-tab">
+                        <div class="card">
+                            <div class="card-header">
+                                <strong>История</strong> компании
+                            </div>
+                            <div class="card-body card-block">
+                                <form action="#" method="post" class="form-inline gap20 align-top fd-column">
+                                    <div class="form-group" style="width: 50%;"><label for="exampleInputName2"
+                                            class="pr-1  form-control-label">Год</label>
+                                            <input id="genHistoryTitleRu" type="number" class="form-control w100"></div>
+                                </form>
+                                <br>
+                                <div class="toolbar">
+                                    <a href="#" class="toolbar-b fas fa-bold" title="Жирный"></a>
+                                    <a href="#" class="toolbar-i fas fa-italic" title="Курсив"></a>
+                                    <a href="#" class="toolbar-u fas fa-underline" title="Подчёркнутый"></a>
+                                    <a href="#" class="toolbar-s fas fa-strikethrough" title="Зачёркнутый"></a>
+                                    <a href="#" class="toolbar-sup fas fa-superscript" title="Верхний индекс"></a>
+                                    <a href="#" class="toolbar-sub fas fa-subscript" title="Нижний индекс"></a>
+                                    <a href="#" class="toolbar-ul fas fa-list-ul" title="Маркированный список"></a>
+                                    <a href="#" class="toolbar-ol fas fa-list-ol" title="Нумерованный список"></a>
+                                    <a href="#" class="toolbar-p" title="Параграф">p</a>
+                                    <a href="#" class="toolbar-h1" title="Заголовок">H1</a>
+                                    <a href="#" class="toolbar-hr" title="Горизонтальная линия">hr</a>
+                                    <a href="#" class="toolbar-blockquote fas fa-quote-right" title="Цитата"></a>
+                                    <a href="#" class="toolbar-img far fa-image" title="Изображение"></a>
+                                    <a href="#" class="toolbar-a fas fa-link" title="Ссылка"></a>
+                                    <a href="#" class="toolbar-unlink fas fa-unlink" title="Удаление ссылки"></a>
+                                    <a href="#" class="toolbar-html" title="Вставить html">HTML</a>
+                                    <a href="#" class="toolbar-text" title="Вставить текст">Text</a>
+                                    <br>
+                                    <a href="#" class="toolbar-left fas fa-align-left" title="по левому краю"></a>
+                                    <a href="#" class="toolbar-center fas fa-align-center" title="по центру"></a>
+                                    <a href="#" class="toolbar-right fas fa-align-right" title="по правому краю"></a>
+                                    <a href="#" class="toolbar-justify fas fa-align-justify" title="по ширине"></a>
+                                    <select class="toolbar-font">
+                                        <option selected="selected" disabled="disabled">Шрифт</option>
+                                        <option value="arial">Arial</option>
+                                        <option value="Courier New">Courier New</option>
+                                        <option value="georgia">Georgia</option>
+                                        <option value="impact">Impact</option>
+                                        <option value="roboto">Tahoma</option>
+                                        <option value="Times New Roman">Times New Roman</option>
+                                        <option value="verdana">Verdana</option>
+                                    </select>
+                                    <select class="toolbar-size">
+                                        <option selected="selected" disabled="disabled">Размер</option>
+                                        <option value="1">10px</option>
+                                        <option value="2">12px</option>
+                                        <option value="3">14px</option>
+                                        <option value="4">16px</option>
+                                        <option value="5">18px</option>
+                                        <option value="6">21px</option>
+                                        <option value="7">26px</option>
+                                    </select>
+                                    <span>Цвет</span> <input class="toolbar-color" type="color" value="#ff0000">
+                                    <span>Фон</span> <input class="toolbar-bg" type="color" value="#ffff00">
+                                    <br>
+                                    <a href="#" class="toolbar-undo fas fa-undo" title="Отмена"></a>
+                                    <a href="#" class="toolbar-redo fas fa-redo" title="Повтор"></a>
+                                    <a href="#" class="toolbar-delete far fa-trash-alt" title="Удалить"></a>
+                                    <a href="#" class="toolbar-selectAll">Выделить всё</a>
+                                    <a href="#" class="toolbar-removeFormat">Очистить стили</a>
+                                    <a href="#" class="toolbar-cut fas fa-cut" title="Вырезать"></a>
+                                    <a href="#" class="toolbar-copy fas fa-copy" title="Копировать"></a>
+                                </div>
+
+                                <div class="editor" contenteditable="true" id="genHistoryTextRu">...</div>
+                            </div>
+                            <div class="card-footer">
+                                <button type="submit" class="btn btn-primary btn-sm"
+                                    onclick="saveHistory('ru','#genHistoryTitleRu','#genHistoryTextRu','#custom-nav-home2')">
+                                    <i class="fa fa-dot-circle-o"></i> Сохранить
+                                </button>
+                                <button type="reset" class="btn btn-danger btn-sm"
+                                    onclick="clearHistory('#genHistoryTitleRu','#genHistoryTextRu')">
+                                    <i class="fa fa-ban"></i> Отменить
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- English -->
+                    <div class="tab-pane fade" id="custom-nav-profile" role="tabpanel"
+                        aria-labelledby="custom-nav-home-tab">
+                        <div class="card">
+                            <div class="card-header">
+                                <strong>History</strong> company
+                            </div>
+                            <div class="card-body card-block">
+                                <form action="#" method="post" class="form-inline gap20 align-top fd-column">
+                                    <div class="form-group" style="width: 50%;"><label for="exampleInputName2"
+                                            class="pr-1  form-control-label">year</label>
+                                            <input id="genHistoryTitleEn" type="number" class="form-control w100"></div>
+                                </form>
+                                <br>
+                                <div class="toolbar">
+                                    <a href="#" class="toolbar-b fas fa-bold" title="Жирный"></a>
+                                    <a href="#" class="toolbar-i fas fa-italic" title="Курсив"></a>
+                                    <a href="#" class="toolbar-u fas fa-underline" title="Подчёркнутый"></a>
+                                    <a href="#" class="toolbar-s fas fa-strikethrough" title="Зачёркнутый"></a>
+                                    <a href="#" class="toolbar-sup fas fa-superscript" title="Верхний индекс"></a>
+                                    <a href="#" class="toolbar-sub fas fa-subscript" title="Нижний индекс"></a>
+                                    <a href="#" class="toolbar-ul fas fa-list-ul" title="Маркированный список"></a>
+                                    <a href="#" class="toolbar-ol fas fa-list-ol" title="Нумерованный список"></a>
+                                    <a href="#" class="toolbar-p" title="Параграф">p</a>
+                                    <a href="#" class="toolbar-h1" title="Заголовок">H1</a>
+                                    <a href="#" class="toolbar-hr" title="Горизонтальная линия">hr</a>
+                                    <a href="#" class="toolbar-blockquote fas fa-quote-right" title="Цитата"></a>
+                                    <a href="#" class="toolbar-img far fa-image" title="Изображение"></a>
+                                    <a href="#" class="toolbar-a fas fa-link" title="Ссылка"></a>
+                                    <a href="#" class="toolbar-unlink fas fa-unlink" title="Удаление ссылки"></a>
+                                    <a href="#" class="toolbar-html" title="Вставить html">HTML</a>
+                                    <a href="#" class="toolbar-text" title="Вставить текст">Text</a>
+                                    <br>
+                                    <a href="#" class="toolbar-left fas fa-align-left" title="по левому краю"></a>
+                                    <a href="#" class="toolbar-center fas fa-align-center" title="по центру"></a>
+                                    <a href="#" class="toolbar-right fas fa-align-right" title="по правому краю"></a>
+                                    <a href="#" class="toolbar-justify fas fa-align-justify" title="по ширине"></a>
+                                    <select class="toolbar-font">
+                                        <option selected="selected" disabled="disabled">Шрифт</option>
+                                        <option value="arial">Arial</option>
+                                        <option value="Courier New">Courier New</option>
+                                        <option value="georgia">Georgia</option>
+                                        <option value="impact">Impact</option>
+                                        <option value="roboto">Tahoma</option>
+                                        <option value="Times New Roman">Times New Roman</option>
+                                        <option value="verdana">Verdana</option>
+                                    </select>
+                                    <select class="toolbar-size">
+                                        <option selected="selected" disabled="disabled">Размер</option>
+                                        <option value="1">10px</option>
+                                        <option value="2">12px</option>
+                                        <option value="3">14px</option>
+                                        <option value="4">16px</option>
+                                        <option value="5">18px</option>
+                                        <option value="6">21px</option>
+                                        <option value="7">26px</option>
+                                    </select>
+                                    <span>Цвет</span> <input class="toolbar-color" type="color" value="#ff0000">
+                                    <span>Фон</span> <input class="toolbar-bg" type="color" value="#ffff00">
+                                    <br>
+                                    <a href="#" class="toolbar-undo fas fa-undo" title="Отмена"></a>
+                                    <a href="#" class="toolbar-redo fas fa-redo" title="Повтор"></a>
+                                    <a href="#" class="toolbar-delete far fa-trash-alt" title="Удалить"></a>
+                                    <a href="#" class="toolbar-selectAll">Выделить всё</a>
+                                    <a href="#" class="toolbar-removeFormat">Очистить стили</a>
+                                    <a href="#" class="toolbar-cut fas fa-cut" title="Вырезать"></a>
+                                    <a href="#" class="toolbar-copy fas fa-copy" title="Копировать"></a>
+                                </div>
+
+                                <div class="editor" contenteditable="true" id="genHistoryTextEn"></div>
+                            </div>
+                            <div class="card-footer">
+                                <button type="submit" class="btn btn-primary btn-sm"
+                                    onclick="saveHistory('en','#genHistoryTitleEn','#genHistoryTextEn','#custom-nav-profile2')">
+                                    <i class="fa fa-dot-circle-o"></i> Сохранить
+                                </button>
+                                <button type="reset" class="btn btn-danger btn-sm"
+                                    onclick="clearHistory('#genHistoryTitleEn','#genHistoryTextEn')">
+                                    <i class="fa fa-ban"></i> Отменить
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Қазақша -->
+                    <div class="tab-pane fade" id="custom-nav-contact" role="tabpanel"
+                        aria-labelledby="custom-nav-home-tab">
+                        <div class="card">
+                            <div class="card-header">
+                                <strong>Компания</strong> тарихы
+                            </div>
+                            <div class="card-body card-block">
+                                <form action="#" method="post" class="form-inline gap20 align-top fd-column">
+                                    <div class="form-group" style="width: 50%;"><label for="exampleInputName2"
+                                            class="pr-1  form-control-label">жыл</label>
+                                            <input id="genHistoryTitleKz" type="number" class="form-control w100"></div>
+                                </form>
+                                <br>
+                                <div class="toolbar">
+                                    <a href="#" class="toolbar-b fas fa-bold" title="Жирный"></a>
+                                    <a href="#" class="toolbar-i fas fa-italic" title="Курсив"></a>
+                                    <a href="#" class="toolbar-u fas fa-underline" title="Подчёркнутый"></a>
+                                    <a href="#" class="toolbar-s fas fa-strikethrough" title="Зачёркнутый"></a>
+                                    <a href="#" class="toolbar-sup fas fa-superscript" title="Верхний индекс"></a>
+                                    <a href="#" class="toolbar-sub fas fa-subscript" title="Нижний индекс"></a>
+                                    <a href="#" class="toolbar-ul fas fa-list-ul" title="Маркированный список"></a>
+                                    <a href="#" class="toolbar-ol fas fa-list-ol" title="Нумерованный список"></a>
+                                    <a href="#" class="toolbar-p" title="Параграф">p</a>
+                                    <a href="#" class="toolbar-h1" title="Заголовок">H1</a>
+                                    <a href="#" class="toolbar-hr" title="Горизонтальная линия">hr</a>
+                                    <a href="#" class="toolbar-blockquote fas fa-quote-right" title="Цитата"></a>
+                                    <a href="#" class="toolbar-img far fa-image" title="Изображение"></a>
+                                    <a href="#" class="toolbar-a fas fa-link" title="Ссылка"></a>
+                                    <a href="#" class="toolbar-unlink fas fa-unlink" title="Удаление ссылки"></a>
+                                    <a href="#" class="toolbar-html" title="Вставить html">HTML</a>
+                                    <a href="#" class="toolbar-text" title="Вставить текст">Text</a>
+                                    <br>
+                                    <a href="#" class="toolbar-left fas fa-align-left" title="по левому краю"></a>
+                                    <a href="#" class="toolbar-center fas fa-align-center" title="по центру"></a>
+                                    <a href="#" class="toolbar-right fas fa-align-right" title="по правому краю"></a>
+                                    <a href="#" class="toolbar-justify fas fa-align-justify" title="по ширине"></a>
+                                    <select class="toolbar-font">
+                                        <option selected="selected" disabled="disabled">Шрифт</option>
+                                        <option value="arial">Arial</option>
+                                        <option value="Courier New">Courier New</option>
+                                        <option value="georgia">Georgia</option>
+                                        <option value="impact">Impact</option>
+                                        <option value="roboto">Tahoma</option>
+                                        <option value="Times New Roman">Times New Roman</option>
+                                        <option value="verdana">Verdana</option>
+                                    </select>
+                                    <select class="toolbar-size">
+                                        <option selected="selected" disabled="disabled">Размер</option>
+                                        <option value="1">10px</option>
+                                        <option value="2">12px</option>
+                                        <option value="3">14px</option>
+                                        <option value="4">16px</option>
+                                        <option value="5">18px</option>
+                                        <option value="6">21px</option>
+                                        <option value="7">26px</option>
+                                    </select>
+                                    <span>Цвет</span> <input class="toolbar-color" type="color" value="#ff0000">
+                                    <span>Фон</span> <input class="toolbar-bg" type="color" value="#ffff00">
+                                    <br>
+                                    <a href="#" class="toolbar-undo fas fa-undo" title="Отмена"></a>
+                                    <a href="#" class="toolbar-redo fas fa-redo" title="Повтор"></a>
+                                    <a href="#" class="toolbar-delete far fa-trash-alt" title="Удалить"></a>
+                                    <a href="#" class="toolbar-selectAll">Выделить всё</a>
+                                    <a href="#" class="toolbar-removeFormat">Очистить стили</a>
+                                    <a href="#" class="toolbar-cut fas fa-cut" title="Вырезать"></a>
+                                    <a href="#" class="toolbar-copy fas fa-copy" title="Копировать"></a>
+                                </div>
+
+                                <div class="editor" contenteditable="true" id="genHistoryTextKz"></div>
+                            </div>
+                            <div class="card-footer">
+                                <button type="submit" class="btn btn-primary btn-sm"
+                                    onclick="saveHistory('kz','#genHistoryTitleKz','#genHistoryTextKz','#custom-nav-contact2')">
+                                    <i class="fa fa-dot-circle-o"></i> Сақтау
+                                </button>
+                                <button type="reset" class="btn btn-danger btn-sm"
+                                    onclick="clearHistory('#genHistoryTitleKz','#genHistoryTextKz')">
+                                    <i class="fa fa-ban"></i> Отменить
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Плюсы компаний -->
+<div class="col-lg-12" onload="loadHistoryAdmin('ru','#custom-nav-home2')">
+    <div class="card">
+        <div class="card-header card-admin">
+            <h4>История компании</h4>
+            <button type="button" class="btn btn-primary" onclick="scrit('cardPlusCompany')"><i class="fa fa-bars"></i>
+                Скрыть</button>
+
+        </div>
+        <div class="card-body" id="cardPlusCompany">
+            <div class="custom-tab">
+
+                <nav>
+                    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                        <a class="nav-item nav-link active show" id="custom-nav-home-tab2" data-toggle="tab"
+                            href="#custom-nav-home2" role="tab" aria-controls="custom-nav-home2" aria-selected="true"
+                            onclick="loadHistoryAdmin('ru','#custom-nav-home2');">Русский</a>
+                        <a class="nav-item nav-link" id="custom-nav-profile-tab2" data-toggle="tab"
+                            href="#custom-nav-profile2" role="tab" aria-controls="custom-nav-profile2"
+                            aria-selected="false"
+                            onclick="loadHistoryAdmin('en','#custom-nav-profile2');">English</a>
+                        <a class="nav-item nav-link" id="custom-nav-contact-tab2" data-toggle="tab"
+                            href="#custom-nav-contact2" role="tab" aria-controls="custom-nav-contact2"
+                            aria-selected="false"
+                            onclick="loadHistoryAdmin('kz','#custom-nav-contact2');">Қазақша</a>
+                    </div>
+                </nav>
+                <div class="tab-content pl-3 pt-2" id="nav-tabContent">
+                    <!-- Русский -->
+                    <div class="tab-pane fade active show" id="custom-nav-home2" role="tabpanel"
+                        aria-labelledby="custom-nav-home-tab2">
+                        
+
+                    </div>
+                    <!-- English -->
+                    <div class="tab-pane fade" id="custom-nav-profile2" role="tabpanel"
+                        aria-labelledby="custom-nav-profile2-tab2">
+                        
+
+                    </div>
+                    <!-- Қазақша -->
+                    <div class="tab-pane fade" id="custom-nav-contact2" role="tabpanel"
+                        aria-labelledby="custom-nav-contact2-tab2">
+                        
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
