@@ -1549,7 +1549,7 @@ function loadDirector(lng) {
         if(item.email.length>2){nmbr='<span class="manager_mail">' + item.numberPhone + '</span>'}
 
         document.getElementById('directorCard').insertAdjacentHTML('beforeend',
-          '<div class="manager">' +
+          '<div class="manager swiper-slide">' +
           '                    <div class="manager_photo" style="background-image: url(' + item.imageUrl + ')"></div>' +
           '                    <span class="manager_name">' + fio + '</span>' +
           '                    <span class="manager_post">' + post + '</span>' +
