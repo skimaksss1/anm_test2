@@ -336,13 +336,13 @@
             </div>
         </div>
     </div>
-    <section class="managers">
+    <section class="managers ">
         <div class="container">
             <h2 id="titleDirector">Руководители компании</h2>
-            <div class="slider-container swiper mySwiper3">
-                    <div class="managers_cards slides-wrapper" id="directorCard">
-                        
-                    </div>
+            <div class="swiper mySwiper3 slider-container">
+                <div class="swiper-wrapper managers_cards" id="directorCard">
+                    
+                </div>
             </div>
         </div>
     </section>
@@ -479,10 +479,8 @@
             },
         }
         });
-
-
         var swiper = new Swiper(".mySwiper3", {
-        slidesPerView: 3,
+        slidesPerView: 2,
         spaceBetween: 20,
         centeredSlides: false,
         autoplay: {
@@ -501,10 +499,11 @@
                 slidesPerView: 5,
             },
             1024: {
-                slidesPerView: 3,
+                slidesPerView: 2,
             },
         }
         });
+
     </script>
     <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
