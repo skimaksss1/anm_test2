@@ -10,32 +10,6 @@
     <link rel="stylesheet" href="css/style.css">  
     <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
 
-    <style>
-        .slider-container {
-          width: 80%;
-          margin: auto;
-          overflow: hidden;
-        }
-    
-        .slides-wrapper {
-          display: flex;
-          transition: transform 0.5s ease-in-out;
-        }
-    
-        .slide {
-          width: 100%;
-          min-width: 100%;
-          box-sizing: border-box;
-        }
-    
-        /* Optional styling for buttons */
-        .prev-btn, .next-btn {
-          cursor: pointer;
-          font-size: 20px;
-          margin-top: 50px;
-        }
-      </style>
-
 </head>
 <body>
     <body onload="pageAbout()">
@@ -365,12 +339,10 @@
     <section class="managers">
         <div class="container">
             <h2 id="titleDirector">Руководители компании</h2>
-            <div class="slider-container">
+            <div class="slider-container swiper mySwiper3">
                     <div class="managers_cards slides-wrapper" id="directorCard">
                         
                     </div>
-                    <button class="prev-btn">&lt; Предыдущий</button>
-<button class="next-btn">Следующий &gt;</button>
             </div>
         </div>
     </section>
@@ -506,12 +478,32 @@
                 slidesPerView: 8.5,
             },
         }
-        //   on: {
-        //     autoplayTimeLeft(s, time, progress) {
-        //       progressCircle.style.setProperty("--progress", 1 - progress);
-        //       progressContent.textContent = `${Math.ceil(time / 1000)}s`;
-        //     }
-        //   }
+        });
+
+
+        var swiper = new Swiper(".mySwiper3", {
+        slidesPerView: 3,
+        spaceBetween: 20,
+        centeredSlides: false,
+        autoplay: {
+            delay: 1500,
+            disableOnInteraction: false
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev"
+        },
+        breakpoints: {
+            300: {
+                slidesPerView: 2,
+            },
+            768: {
+                slidesPerView: 5,
+            },
+            1024: {
+                slidesPerView: 3,
+            },
+        }
         });
     </script>
     <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
@@ -520,89 +512,6 @@
     <script src="js/initfb.js"></script>
     <script src="js/translate.js"></script>
     <script src="js/fbwork.js"></script>
-    <script>
-        class Slider {
-          constructor(container, wrapper, prevBtn, nextBtn) {
-            this.slidesContainer = container;
-            this.slidesWrapper = wrapper;
-            this.prevButton = prevBtn;
-            this.nextButton = nextBtn;
-            this.currentIndex = 0;
-            this.autoScrollInterval = null;
-      
-            this.prevButton.addEventListener('click', () => this.prevSlide());
-            this.nextButton.addEventListener('click', () => this.nextSlide());
-      
-            this.generateSlides();
-            this.startAutoScroll();
-          }
-      
-          generateSlides() {
-            for (let i = 1; i <= 10; i++) {
-              const slide = document.createElement('div');
-              slide.className = 'slide';
-              slide.textContent = `Содержимое слайда ${i}`;
-              this.slidesWrapper.appendChild(slide);
-            }
-      
-            // Копируем слайды для циклического эффекта
-            const slides = this.slidesWrapper.getElementsByClassName('slide');
-            const clonedSlides = Array.from(slides).map(slide => slide.cloneNode(true));
-            clonedSlides.forEach(clonedSlide => this.slidesWrapper.appendChild(clonedSlide));
-      
-            this.slideWidth = document.querySelector('.slide').offsetWidth;
-            this.updateSlider();
-          }
-      
-          nextSlide() {
-            if (this.currentIndex < this.slidesWrapper.children.length - 4) {
-              this.currentIndex++;
-              this.updateSlider();
-            } else {
-              // Вернуться к первому слайду
-              this.currentIndex = -3;
-              this.updateSlider();
-            }
-          }
-      
-          prevSlide() {
-            if (this.currentIndex > 0) {
-              this.currentIndex--;
-              this.updateSlider();
-            } else {
-              // Перейти к последнему слайду
-              this.currentIndex = this.slidesWrapper.children.length - 4;
-              this.updateSlider();
-            }
-          }
-      
-          updateSlider() {
-            const translateValue = -this.currentIndex * this.slideWidth;
-            this.slidesWrapper.style.transform = `translateX(${translateValue}px)`;
-          }
-      
-          startAutoScroll() {
-            this.autoScrollInterval = setInterval(() => {
-              this.nextSlide();
-            }, 3000);
-          }
-      
-          stopAutoScroll() {
-            clearInterval(this.autoScrollInterval);
-          }
-        }
-      
-        document.addEventListener('DOMContentLoaded', () => {
-          const slider = new Slider(
-            document.querySelector('.slider-container'),
-            document.querySelector('.slides-wrapper'),
-            document.querySelector('.prev-btn'),
-            document.querySelector('.next-btn')
-          );
-      
-          // Генерация слайдов
-          slider.generateSlides();
-        });
-      </script>
+    
 </body>
 </html>
